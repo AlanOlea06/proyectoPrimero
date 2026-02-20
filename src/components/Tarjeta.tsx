@@ -10,9 +10,11 @@ interface TarjetaProps {
 
 export const Tarjeta = ({nombre, descripcion}: TarjetaProps) => {
 	const router = useRouter();
-	console.log(nombre, descripcion);
+	//console.log(nombre, descripcion);
 	return (
 		<Pressable style={Styles.tarjeta} onPress={() => router.push({
+		//La ruta se genera con el nombre de la persona iniciando en mayuscula
+		//ejemplos: Alan, Ivan, Diego, Tony, Paul si el archivo esta en minusculas
     pathname: `./Equipo/${nombre}`,
     params: {
         nombre: nombre
