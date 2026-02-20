@@ -8,7 +8,7 @@ export const Persona = () => {
     return ( 
         <View>
             <Text>{params.nombre}</Text>
-            <Image source={require(`../../assets/image/alan.jpeg`)} style={{width: 100, height: 100}} />
+            <Image source={require(`../../assets/image/prueba.png`)} style={{width: 100, height: 100}} />
             <Text>{params.descripcion}</Text>
         </View>
     )

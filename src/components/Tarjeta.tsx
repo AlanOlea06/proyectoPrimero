@@ -10,19 +10,17 @@ interface TarjetaProps {
 
 export const Tarjeta = ({nombre, descripcion}: TarjetaProps) => {
 	const router = useRouter();
-	const imagen = require(`../assets/image/prueba.png`);
 	console.log(nombre, descripcion);
 	return (
 		<Pressable style={Styles.tarjeta} onPress={() => router.push({
-    pathname: "/Equipo/Persona",
+    pathname: `./Equipo/${nombre}`,
     params: {
-        nombre: 'nombre',
-        descripcion: 'descripcion'
+        nombre: nombre
     }
 })}
 >
 			<View style={Styles.topBarTarjeta}>
-				<Image source={imagen} style={Styles.imagen} />
+				<Image source={require(`../assets/image/prueba.png`)} style={Styles.imagen} />
 				<View style={Styles.tarjetaBottom}>
 					<Text>{nombre}</Text>
 				</View>
