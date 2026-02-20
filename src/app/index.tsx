@@ -1,13 +1,15 @@
 import { View } from "react-native";
 import { Tarjeta } from "../components/Tarjeta";
+import { Styles } from "../styles/Styles";
 
 export default function Index() {
+  const tarjetas = ['Alan', 'Ivan', 'Diego', 'Tony', 'Paul']
+
   return (
-    <View style={{flex: 1, flexDirection: 'row'}}>
-      <Tarjeta nombre="Tarjeta 1" descripcion="Esta es la descripción de la tarjeta 1" />
-      <Tarjeta nombre="Tarjeta 2" descripcion="Esta es la descripción de la tarjeta 2" />
-      <Tarjeta nombre="Tarjeta 3" descripcion="Esta es la descripción de la tarjeta 3" />
-      <Tarjeta nombre="Tarjeta 4" descripcion="Esta es la descripción de la tarjeta 4" />
+    <View style={Styles.inicio}>
+      {tarjetas.map((nombre, index) => (
+        <Tarjeta key={index} nombre={nombre} descripcion={`Esta es la descripción de la tarjeta ${index + 1}`} />
+      ))}
     </View>
   );
 }

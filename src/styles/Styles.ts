@@ -2,16 +2,40 @@ import { StyleSheet } from 'react-native';
 
 
 export const Styles = StyleSheet.create({
-    tarjeta: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+    inicio:{
+        flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
         justifyContent: 'center',
-        backgroundColor: '#506d99',
-        padding: 20,
+        alignItems: 'center'
+    },
+    tarjeta: {
+        backgroundColor: '#4da36e',
         width: '30%',
-        height: 300,
+        height: '50%',
         borderRadius: 20,
         margin: 10,
-    }
+        overflow: 'hidden',
+        fontFamily: 'Open Sans',
+    },
+    topBarTarjeta: {
+        display: 'flex',
+        flexDirection: 'row',
+        backgroundColor: '#ffffff',
+        width: '100%',
+        height: '40%',
+    },
+    tarjetaBottom: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 10,
+        height: "100%",
+        margin: 'auto'
+    },
+    imagen:{
+        width: 100,
+        height: '100%',
+    },
+
 });

@@ -13,7 +13,7 @@ export default function RootLayout() {
     <SafeAreaProvider>
       <StatusBar style="auto" />
       <Stack screenOptions={ {headerTitleStyle: {fontFamily:"SpaceMono"},headerBackTitleStyle:{fontFamily:"SpaceMono"}}}>
-        <Stack.Screen name="index" options= {{title:"Home"}}/>
+        <Stack.Screen name="index" options= {{title:"finbalance", headerTitleAlign:"center"}} />
       </Stack>
     </SafeAreaProvider>
   );

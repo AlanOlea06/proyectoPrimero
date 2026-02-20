@@ -1,5 +1,6 @@
+import { useRouter } from "expo-router";
 import React from "react";
-import { Text, View } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 import { Styles } from "../styles/Styles";
 
 interface TarjetaProps {
@@ -7,12 +8,29 @@ interface TarjetaProps {
 	descripcion: string;
 }
 
-export const Tarjeta = (props: TarjetaProps) => {
+export const Tarjeta = ({nombre, descripcion}: TarjetaProps) => {
+	const router = useRouter();
+	const imagen = require(`../assets/image/prueba.png`);
+	console.log(nombre, descripcion);
 	return (
-		<View style={Styles.tarjeta}>
-			<Text>
-				{props.nombre}: {props.descripcion}
-			</Text>
-		</View>
+		<Pressable style={Styles.tarjeta} onPress={() => router.push({
+    pathname: "/Equipo/Persona",
+    params: {
+        nombre: 'nombre',
+        descripcion: 'descripcion'
+    }
+})}
+>
+			<View style={Styles.topBarTarjeta}>
+				<Image source={imagen} style={Styles.imagen} />
+				<View style={Styles.tarjetaBottom}>
+					<Text>{nombre}</Text>
+				</View>
+			</View>
+			<View style={{padding: 10, height: "60%", margin: 'auto'}}>
+				<Text style={{fontFamily: 'Open Sans', fontSize: 20}}>Descripcion</Text>
+				<Text style={Styles.tarjetaBottom}>{nombre}, {descripcion}</Text>
+			</View>
+		</Pressable>
 	)
 }
