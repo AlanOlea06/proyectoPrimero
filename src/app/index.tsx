@@ -3,25 +3,45 @@ import { Tarjeta } from "../components/Tarjeta";
 import { Styles } from "../styles/Styles";
 
 export default function Index() {
-  // 1. Transformamos el arreglo de strings a un arreglo de objetos
-  // Aquí es donde Metro Bundler verá los require() y empaquetará las imágenes
+  // Había que agregar la propiedad 'descripcion' a cada integrante del equipo o si no todos ibamos
+  // a tener el mismo texto mmmmmmmmmmeeeeeeeekkkouuuus
   const tarjetas = [
-    { nombre: 'Alan', imagen: require('../assets/image/alan.jpeg') },
-    { nombre: 'Ivan', imagen: require('../assets/image/prueba.png') },
-    { nombre: 'Diego', imagen: require('../assets/image/prueba.png') },
-    { nombre: 'Tony', imagen: require('../assets/image/prueba.png') },
-    { nombre: 'Paul', imagen: require('../assets/image/prueba.png') }
+    { 
+      nombre: 'Alan', 
+      imagen: require('../assets/image/alan.jpeg'),
+      descripcion: 'el groupleader, el que se encarga de conquistar a las nenas y hacer back-end del bueno'
+    },
+    { 
+      nombre: 'Ivan', 
+      imagen: require('../assets/image/ivan.jpeg'),
+      descripcion: 'desarrollador de Finbalance en back-end, front-end, diseño, base de datos y catador de cheves profesional' 
+    },
+    { 
+      nombre: 'Diego', 
+      imagen: require('../assets/image/prueba.png'),
+      descripcion: 'es la definicion de Lo Sano' 
+    },
+    { 
+      nombre: 'Tony', 
+      imagen: require('../assets/image/prueba.png'),
+      descripcion: 'te va a preguntar si andas wixi wixi' 
+    },
+    { 
+      nombre: 'Paul', 
+      imagen: require('../assets/image/prueba.png'),
+      descripcion: 'actor sexy e inspiracion para la creacion del superheroe Miles Morales' 
+    }
   ];
 
   return (
     <View style={Styles.inicio}>
-      {/* 2. Ahora iteramos sobre los objetos ("item") en lugar de solo strings */}
+      {/*Ahora leemos item.descripcion pa que cada quien tenga la suya */}
       {tarjetas.map((item, index) => (
         <Tarjeta 
           key={index} 
-          nombre={item.nombre} // Sacamos el nombre del objeto
-          descripcion={`Esta es la descripción de la tarjeta ${index + 1}`} 
-          imagen={item.imagen} // Le pasamos la imagen ya requerida a tu componente
+          nombre={item.nombre} 
+          descripcion={item.descripcion}
+          imagen={item.imagen} 
         />
       ))}
     </View>
