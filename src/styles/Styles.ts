@@ -10,13 +10,13 @@ export const Styles = StyleSheet.create({
         alignItems: 'center'
     },
     tarjeta: {
-        backgroundColor: '#4da36e',
+        backgroundColor: "#0b9387",
         width: '30%',
         height: '50%',
         borderRadius: 20,
         margin: 10,
         overflow: 'hidden',
-        fontFamily: 'Open Sans',
+        fontFamily: 'Odor Mean Chey, serif',
     },
     topBarTarjeta: {
         display: 'flex',
@@ -31,7 +31,9 @@ export const Styles = StyleSheet.create({
         justifyContent: 'center',
         padding: 10,
         height: "100%",
-        margin: 'auto'
+        margin: 'auto',
+        fontFamily: 'Odor Mean Chey, serif',
+        fontSize: 20,
     },
     imagen:{
         width: 100,
