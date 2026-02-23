@@ -9,7 +9,7 @@ export const diccionarioEquipo = {
   Ivan: {
     nombre: 'Ivan',
     descripcion: 'Esta es la descripción de Ivan',
-    imagen: require('../../assets/image/prueba.png')
+    imagen: require('../../assets/image/ivan.jpeg')
   },
   Diego: {
     nombre: 'Diego',

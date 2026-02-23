@@ -1,6 +1,6 @@
 import { useLocalSearchParams } from "expo-router";
 import { Image, Text, View, } from "react-native";
-import { Styles } from "./PaStyles";
+import { Styles } from "../EquipoStyles/PaStyles";
 export const Persona = () => {
     const params = useLocalSearchParams();
     console.log(params);
