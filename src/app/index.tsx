@@ -9,7 +9,7 @@ export default function Index() {
     { 
       nombre: 'Alan', 
       imagen: require('../assets/image/alan.jpeg'),
-      descripcion: 'el groupleader, el que se encarga de conquistar a las nenas y hacer back-end del bueno'
+      descripcion: 'Montado en el maquinon, en la muñeca un relojon'
     },
     { 
       nombre: 'Ivan', 
