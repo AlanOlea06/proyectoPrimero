@@ -14,11 +14,11 @@ export const Tarjeta = ({nombre, descripcion}: TarjetaProps) => {
 	console.log(nombre, descripcion);
 	return (
 		<Pressable style={Styles.tarjeta} onPress={() => router.push({
-    pathname: "/Equipo/Persona",
-    params: {
-        nombre: 'nombre',
-        descripcion: 'descripcion'
-    }
+		pathname: `./Equipo/${nombre}`,
+		params: {
+			nombre: nombre
+			
+		}
 })}
 >
 			<View style={Styles.topBarTarjeta}>

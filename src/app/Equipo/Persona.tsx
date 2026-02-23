@@ -8,6 +8,7 @@ export const Persona = () => {
     return ( 
         <View>
             <Text>{params.nombre}</Text>   
+           
             <Text>{params.descripcion}</Text>
         </View>
     )
