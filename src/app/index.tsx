@@ -1,47 +1,21 @@
 import { View } from "react-native";
+import { diccionarioEquipo } from "../components/shared/datosEquipo";
 import { Tarjeta } from "../components/Tarjeta";
 import { Styles } from "../styles/Styles";
 
 export default function Index() {
-  // Había que agregar la propiedad 'descripcion' a cada integrante del equipo o si no todos ibamos
-  // a tener el mismo texto mmmmmmmmmmeeeeeeeekkkouuuus
-  const tarjetas = [
-    { 
-      nombre: 'Alan', 
-      imagen: require('../assets/image/alan.jpeg'),
-      descripcion: 'Montado en el maquinon, en la muñeca un relojon'
-    },
-    { 
-      nombre: 'Ivan', 
-      imagen: require('../assets/image/ivan.jpeg'),
-      descripcion: 'desarrollador de Finbalance en back-end, front-end, diseño, base de datos y catador de cheves profesional' 
-    },
-    { 
-      nombre: 'Diego', 
-      imagen: require('../assets/image/prueba.png'),
-      descripcion: 'es la definicion de Lo Sano' 
-    },
-    { 
-      nombre: 'Tony', 
-      imagen: require('../assets/image/prueba.png'),
-      descripcion: 'te va a preguntar si andas wixi wixi' 
-    },
-    { 
-      nombre: 'Paul', 
-      imagen: require('../assets/image/prueba.png'),
-      descripcion: 'actor sexy e inspiracion para la creacion del superheroe Miles Morales' 
-    }
-  ];
+  // Aquí es donde Metro Bundler verá los require() y empaquetará las imágenes
+  const tarjetas = Object.values(diccionarioEquipo);
 
   return (
     <View style={Styles.inicio}>
-      {/*Ahora leemos item.descripcion pa que cada quien tenga la suya */}
-      {tarjetas.map((item, index) => (
+      {/* 2. Ahora iteramos sobre los objetos ("persona") en lugar de solo strings */}
+      {tarjetas.map((persona, index) => (
         <Tarjeta 
           key={index} 
-          nombre={item.nombre} 
-          descripcion={item.descripcion}
-          imagen={item.imagen} 
+          nombre={persona.nombre} // Sacamos el nombre del objeto
+          descripcion={persona.descripcion} 
+          imagen={persona.imagen} // Le pasamos la imagen ya requerida a tu componente
         />
       ))}
     </View>

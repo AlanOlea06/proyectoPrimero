@@ -6,7 +6,9 @@ import FinbalanceLogo from "../components/FinbalanceLogo";
 
 export default function RootLayout() {
   const [loaded] = useFonts({ 
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf") 
+    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    // Add the Odor Mean Chey font file to `src/assets/fonts` and uncomment the line below
+    // OdorMeanChey: require("../assets/fonts/OdorMeanChey-Regular.ttf")
   });
    
   if (!loaded) {
@@ -18,8 +20,8 @@ export default function RootLayout() {
       <StatusBar style="auto" />
       <Stack 
         screenOptions={{ 
-          headerTitleStyle: { fontFamily: "SpaceMono" },
-          headerBackTitleStyle: { fontFamily: "SpaceMono" }
+          headerTitleStyle: { fontFamily: "OdorMeanChey" },
+          headerBackTitleStyle: { fontFamily: "OdorMeanChey" }
         }}
       >
         <Stack.Screen 
