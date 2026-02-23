@@ -16,8 +16,15 @@ export const Styles = StyleSheet.create({
         borderRadius: 20,
         margin: 10,
         overflow: 'hidden',
+    },
+
+    tarjetaName: {
+        fontSize: 35,
+        fontWeight: 'bold',
+        color: 'black',
         fontFamily: 'Odor Mean Chey, serif',
     },
+
     topBarTarjeta: {
         display: 'flex',
         flexDirection: 'row',
@@ -29,11 +36,11 @@ export const Styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 10,
+        padding: 35,
         height: "100%",
         margin: 'auto',
         fontFamily: 'Odor Mean Chey, serif',
-        fontSize: 20,
+        fontSize: 25,
     },
     imagen:{
         width: 100,
