@@ -24,7 +24,7 @@ export const diccionarioEquipo = {
   Paul: {
     nombre: 'Paul',
     descripcion: 'Esta es la descripción de Paul',
-    imagen: require('../../assets/image/prueba.png')
+    imagen: require('../../assets/image/maya.png')
   }
   // Agrega a Tony y Paul aquí...
 };
