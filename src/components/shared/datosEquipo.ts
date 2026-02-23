@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const diccionarioEquipo = {
   Alan: {
     nombre: 'Alan',
