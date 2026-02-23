@@ -25,11 +25,11 @@ export const Tarjeta = ({nombre, descripcion, imagen}: TarjetaProps) => {
 			<View style={Styles.topBarTarjeta}>
 				<Image source={imagen} style={Styles.imagen} />
 				<View style={Styles.tarjetaBottom}>
-					<Text style={{color: 'black', fontFamily: 'Odor Mean Chey', fontSize: 35}}>{nombre}</Text>
+					<Text style={[Styles.tarjetaName, {color: 'black'}]}>{nombre}</Text>
 				</View>
 			</View>
 			<View style={{padding: 10, height: "60%", alignItems: 'center', justifyContent: 'center'}}>
-				<Text style={[Styles.tarjetaBottom, {textAlign: 'center'}]}>{nombre}, {descripcion}</Text>
+				<Text style={[Styles.tarjetaBottom]}>{nombre}, {descripcion}</Text>
 			</View>
 		</Pressable>
 	)
