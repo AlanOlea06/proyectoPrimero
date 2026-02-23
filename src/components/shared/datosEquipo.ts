@@ -26,5 +26,4 @@ export const diccionarioEquipo = {
     descripcion: 'Esta es la descripción de Paul',
     imagen: require('../../assets/image/prueba.png')
   }
-  // Agrega a Tony y Paul aquí...
 };

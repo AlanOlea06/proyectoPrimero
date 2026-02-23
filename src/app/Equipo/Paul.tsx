@@ -1,7 +1,7 @@
 import { useLocalSearchParams } from "expo-router";
 import { Image, Text, View, } from "react-native";
 import { Styles } from "../EquipoStyles/PaStyles";
-export const Persona = () => {
+export const Paul = () => {
     const params = useLocalSearchParams();
     console.log(params);
     return ( 
@@ -18,4 +18,4 @@ export const Persona = () => {
     )
 }
 
-export default Persona;
+export default Paul;
