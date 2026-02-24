@@ -1,3 +1,4 @@
+
 // Archivo: datosEquipo.ts
 // Aquí guardamos toda la info de tu equipo con sus imágenes ya procesadas
 export const diccionarioEquipo = {
@@ -13,18 +14,17 @@ export const diccionarioEquipo = {
   },
   Diego: {
     nombre: 'Diego',
-    descripcion: 'Esta es la descripción de Diego',
+    descripcion: 'le da un baisa a la mota',
     imagen: require('../../assets/image/prueba.png')
   },
   Tony: {
     nombre: 'Tony',
-    descripcion: 'Esta es la descripción de Tony',
+    descripcion: 'No se porta bonito',
     imagen: require('../../assets/image/Tony.jpeg')
   },
   Paul: {
     nombre: 'Paul',
-    descripcion: 'Esta es la descripción de Paul',
-    imagen: require('../../assets/image/prueba.png')
+    descripcion: 'Hola soy paul hdeiuhaiuwhiuhwahiuhwa',
+    imagen: require('../../assets/image/maya.png')
   }
-  // Agrega a Tony y Paul aquí...
 };
