@@ -18,8 +18,8 @@ export default function RootLayout() {
       <StatusBar style="auto" />
       <Stack 
         screenOptions={{ 
-          headerTitleStyle: { fontFamily: "SpaceMono" },
-          headerBackTitleStyle: { fontFamily: "SpaceMono" }
+          headerTitleStyle: { fontFamily: "OdorMeanChey" },
+          headerBackTitleStyle: { fontFamily: "OdorMeanChey" }
         }}
       >
         <Stack.Screen 
