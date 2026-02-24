@@ -3,6 +3,7 @@ import { diccionarioEquipo } from "../components/shared/datosEquipo";
 import { Tarjeta } from "../components/Tarjeta";
 import { Styles } from "../styles/Styles";
 
+
 export default function Index() {
   // Aquí es donde Metro Bundler verá los require() y empaquetará las imágenes
   const tarjetas = Object.values(diccionarioEquipo);
@@ -21,3 +22,4 @@ export default function Index() {
     </View>
   );
 }
+

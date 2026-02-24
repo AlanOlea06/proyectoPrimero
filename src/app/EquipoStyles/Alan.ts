@@ -4,18 +4,22 @@ import { StyleSheet } from 'react-native';
 export const Styles = StyleSheet.create({
     content: {
         flex: 1,
-        alignItems: 'center'
+        padding: 20,
     },
     imagen: {
-        width: 100,
-        height: 100,
+        width: 400,
+        height: 200,
     },
+    DescripcionLarga: {
+        marginTop: 20,
+        fontSize: 16,
+    },
+
+
     nombre: {
         flex: 1,
         fontSize: 30,
-        margin: 20,
     }
-
 });
 
 export default Styles;

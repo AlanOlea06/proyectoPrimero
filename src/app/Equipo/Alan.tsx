@@ -1,20 +1,17 @@
-import { useLocalSearchParams } from "expo-router";
 import React from "react";
 import { Image, Text, View } from "react-native";
+import { diccionarioEquipo } from "../../components/shared/datosEquipo";
 import { Styles } from "../EquipoStyles/Alan";
 
-export const Persona = () => {
-    const params = useLocalSearchParams();
+export const Alan = () => {
+    const Alan = diccionarioEquipo.Alan;
 
-
-    console.log(params);
-    return ( 
+    return (
         <View style={Styles.content}>
-            <Text style={Styles.nombre}>{params.nombre}</Text>
-            <Image source={require('../../assets/image/alan.jpeg')} style={Styles.imagen} />
-            <Text>{params.descripcion}</Text>
+            <Image source={Alan.imagen} style={Styles.imagen} />
+            <Text style={Styles.DescripcionLarga}>{Alan.DescripcionLarga}</Text>
         </View>
     )
 }
 
-export default Persona;
+export default Alan;
