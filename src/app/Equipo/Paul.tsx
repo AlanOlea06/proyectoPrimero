@@ -27,7 +27,7 @@ const HoverImage = ({ source, description }: HoverImageProps) => {
     );
 };
 
-export const Persona = () => {
+export const Paul = () => {
     const params = useLocalSearchParams();
     console.log(params);
     return (
@@ -72,4 +72,4 @@ export const Persona = () => {
     );
 };
 
-export default Persona;
+export default Paul;
