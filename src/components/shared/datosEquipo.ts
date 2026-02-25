@@ -15,13 +15,15 @@ export const diccionarioEquipo = {
   },
   Diego: {
     nombre: 'Diego',
-    descripcion: 'le da un baisa a la mota',
+    descripcion: 'Esta es la descripción de Diego',
     imagen: require('../../assets/image/prueba.png')
   },
   Tony: {
     nombre: 'Tony',
     descripcion: 'No se porta bonito',
-    imagen: require('../../assets/image/Tony.jpeg')
+    imagen: require('../../assets/image/Tony.jpeg'),
+    
+  
   },
   Paul: {
     nombre: 'Paul',
