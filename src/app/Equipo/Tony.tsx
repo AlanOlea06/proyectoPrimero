@@ -1,6 +1,6 @@
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
-import { Image, Text, View, ScrollView } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import { Styles } from "../EquipoStyles/Tony";
 
 export default function Tony() {

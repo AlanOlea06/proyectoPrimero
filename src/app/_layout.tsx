@@ -7,7 +7,7 @@ import FinbalanceLogo from "../components/FinbalanceLogo";
 export default function RootLayout() {
   const [loaded] = useFonts({ 
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
-    OdorMeanChey: require("../assets/fonts/OdorMeanChey-Regular.ttf")
+    OdorMeanChey: require("../assets/fonts/odor-mean-chey-v31-latin-regular.ttf")
     // Add the Odor Mean Chey font file to `src/assets/fonts` and uncomment the line below
     // OdorMeanChey: require("../assets/fonts/OdorMeanChey-Regular.ttf")
   });
