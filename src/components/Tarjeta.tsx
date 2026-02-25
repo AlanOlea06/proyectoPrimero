@@ -29,7 +29,7 @@ export const Tarjeta = ({nombre, descripcion, imagen}: TarjetaProps) => {
 				</View>
 			</View>
 			<View style={{padding: 10, height: "60%", alignItems: 'center', justifyContent: 'center'}}>
-				<Text style={[Styles.tarjetaBottom]}>{nombre}, {descripcion}</Text>
+				<Text style={[Styles.tarjetaBottom]}>{descripcion}</Text>
 			</View>
 		</Pressable>
 	)
