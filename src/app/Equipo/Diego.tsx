@@ -3,18 +3,15 @@ import React from "react";
 import { Image, Text, View, ScrollView } from "react-native";
 import { Styles } from "../EquipoStyles/Diego";
 
-export default function Tony() {
+export default function Diego() {
     // 1. Read the 'mode' from the URL parameters
     // Default to 'personal' if no mode is selected
     const { nombre, descripcion, mode = 'personal' } = useLocalSearchParams();
 
     return (
-        <ScrollView contentContainerStyle={Styles.content}>
-            <Text style={Styles.nombre}>{nombre || "Diego"}</Text>
-            
-            <Image source={require('../../assets/image/Diego.jpeg')} style={Styles.imagen} />
-
-            {/* CONDITIONAL RENDERING AREA */}
+                               
+                    
+        <ScrollView style={Styles.mainContainer}>
             <View style={{ marginTop: 20, padding: 10 }}>
                 
                 {mode === 'personal' && (
@@ -29,10 +26,10 @@ export default function Tony() {
                 {mode === 'professional' && (
                     <View>
                         <Text style={{fontSize: 22, fontWeight: 'bold'}}>Professional Skills </Text>
-                        <Text>• React Native </Text>
-                        <Text>• Python </Text> 
-                        <Text>• C# Developer </Text>
-                        <Text>• English Level: B2 (In Progress)</Text>
+                        <Text>• Profesional en Obbys de Roblox </Text>
+                        <Text>• Ganador de un total de 0 torneos en Fortnite </Text> 
+                        <Text>• Desarrollador de FinBalance </Text>
+                        <Text>• (In Progress)</Text>
                     </View>
                 )}
 
@@ -45,5 +42,6 @@ export default function Tony() {
 
             </View>
         </ScrollView>
+   
     );
 }
