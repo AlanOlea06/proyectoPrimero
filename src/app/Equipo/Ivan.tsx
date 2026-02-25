@@ -29,8 +29,7 @@ export default function Ivan() {
                 <Text style={Styles.headerBio}>"El maestro del za" {'\n'}
                 </Text>
                 <Text style={Styles.headerBio}>
-                    Desarrollador de Finbalance en Front-end, Back-end, Base de Datos, Diseño Grafico,{'\n'}
-                    Ciberseguridad.{'\n'}
+                    Desarrollador de Finbalance en Front-end, Back-end, Base de Datos, Diseño Grafico y Ciberseguridad.{'\n'}
                     Tambien soy catador de cheves profesional{'\n'}
                 </Text>
             </View>
@@ -53,21 +52,31 @@ export default function Ivan() {
                             <View style={Styles.listItem}>
                                 <Text style={Styles.listIcon}></Text>
                                 <View>
-                            <Text style={Styles.listTitle}>Ponga atencion:</Text>
-                            <Text style={Styles.listText}>Al chile uno tiene que ser bien mandilon con su mujer, no reniegue</Text>
+                            <Text style={Styles.listTitle}>Pongan atencion:</Text>
+                            <Text style={Styles.listText}>Al chile uno tiene que ser bien mandilon con su mujer, sin renegarle cabrones
+                            </Text>
                                 </View>
                             </View>
+
+                            <Text style={Styles.subHeader}>Ivanqsadilla core:</Text>
 
                             <View style={Styles.galleryGrid}>
                                 <Image source={require('../../assets/image/IMAGEN1.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/IMAGEN2.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/IMAGEN3.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IMAGEN4.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IMAGEN5.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IMAGEN6.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IMAGEN7.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IMAGEN8.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IMAGEN9.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IMAGEN10.jpeg')} style={Styles.galleryImage} />
                                 </View>
                         
 
                             {/* Redes Sociales */}
                         <View style={{marginTop: 20}}>
-                             <Text style={Styles.subHeader}>No me sigan, tengo mujer</Text>
+                             <Text style={Styles.subHeader}>No me sigan, tengo mujer.</Text>
                              
                              <View style={Styles.socialButton}>
                                 {/* Botón de Instagram */}
@@ -84,37 +93,39 @@ export default function Ivan() {
 
                     {mode === 'professional' && (
                         <View style={Styles.section}>
-                            <Text style={Styles.subHeader}>CAREER</Text>
-                            <Text style={Styles.title}>Professional Skills</Text>
+                            <Text style={Styles.title}>Habilidades Destacadas</Text>
                             
                             <View style={Styles.skillRow}>
-                                <Text style={Styles.skillTag}>React Native</Text>
-                                <Text style={Styles.skillTag}>Python</Text>
-                                <Text style={Styles.skillTag}>C#</Text>
-                                <Text style={Styles.skillTag}>SQL</Text>
-                                <Text style={Styles.skillTag}>Pseint</Text>
-                                <Text style={Styles.skillTag}>Figma</Text>
-                                <Text style={Styles.skillTag}>Draw.io</Text>
-                                <Text style={Styles.skillTag}>Adobe Ilustrator</Text>
-                                <Text style={Styles.skillTag}>Adobe After Efects</Text>
-                                <Text style={Styles.skillTag}>AutoCad</Text>
-                                <Text style={Styles.skillTag}>SolidSworks</Text>
-                                <Text style={Styles.skillTag}>Artist</Text>
+                                <Text style={Styles.skillTag}>JavaScript</Text>
+                                <Text style={Styles.skillTag}>Next.js</Text>
+                                <Text style={Styles.skillTag}>Fortnite</Text>
+                                <Text style={Styles.skillTag}>Typescript</Text>
+                                <Text style={Styles.skillTag}>c#</Text>
+                                <Text style={Styles.skillTag}>Analista de futbol</Text>
+                                <Text style={Styles.skillTag}>.NET</Text>
                             </View>
 
                             <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>🇺🇸</Text>
+                                <Text style={Styles.listIcon}></Text>
                                 <View>
-                                    <Text style={Styles.listTitle}>English Level</Text>
-                                    <Text style={Styles.listText}>B2 (In Progress)</Text>
+                                    <Text style={Styles.listTitle}>Nivel de Ingles</Text>
+                                    <Text style={Styles.listText}>C1 (Sometimes)</Text>
+                                </View>
+                            </View>
+
+                            <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}></Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>Mr. Worldwide</Text>
+                                    <Text style={Styles.listText}>La mejor voz de Pitbull de todo CUU</Text>
                                 </View>
                             </View>
 
                              <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>🇺🇸</Text>
+                                <Text style={Styles.listIcon}></Text>
                                 <View>
-                                    <Text style={Styles.listTitle}>Graphic Designer</Text>
-                                    <Text style={Styles.listText}>Proffesional Designer</Text>
+                                    <Text style={Styles.listTitle}>Nivel de Edicion de video</Text>
+                                    <Text style={Styles.listText}>La mera paipa pal Sony Vegas y el Ae</Text>
                                 </View>
                             </View>
                         </View>
@@ -122,27 +133,19 @@ export default function Ivan() {
 
                     {mode === 'pictures' && (
                         <View style={Styles.section}>
-                            <Text style={Styles.subHeader}>MEMORIES</Text>
-                            <Text style={Styles.title}>Gallery 📸</Text>
+                            <Text style={Styles.title}>Yo y la gente que amo</Text>
                             
                             <View style={Styles.galleryGrid}>
-                                <Image source={require('../../assets/image/TonyImages/Tony1.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony2.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony3.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony4.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony5.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony6.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony8.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony10.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony11.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony12.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony13.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony14.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony15.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony17.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony19.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony20.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/TonyImages/Tony21.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IvanPics/pic1.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IvanPics/pic2.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IvanPics/pic3.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IvanPics/pic4.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IvanPics/pic5.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IvanPics/pic6.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IvanPics/pic7.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IvanPics/pic8.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IvanPics/pic9.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/IvanPics/pic10.jpeg')} style={Styles.galleryImage} />
                             </View>
                         </View>
                     )}
