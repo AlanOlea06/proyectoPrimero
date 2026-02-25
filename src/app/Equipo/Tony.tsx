@@ -125,7 +125,7 @@ export default function Tony() {
                              <View style={Styles.socialRow}>
                                 <Pressable 
                                     style={Styles.socialButton} 
-                                    onPress={() => Linking.openURL('https://www.instagram.com/tu_usuario')}
+                                    onPress={() => Linking.openURL('https://www.instagram.com/dan_f5018')}
                                 >
                                     <AntDesign name="instagram" size={24} color="white" />
                                     <Text style={Styles.socialText}>Instagram</Text>
@@ -133,7 +133,7 @@ export default function Tony() {
 
                                 <Pressable 
                                     style={Styles.socialButton}
-                                    onPress={() => Linking.openURL('https://github.com/tu_usuario')}
+                                    onPress={() => Linking.openURL('https://github.com/DanielFlores235')}
                                 >
                                     <AntDesign name="github" size={24} color="white" />
                                     <Text style={Styles.socialText}>GitHub</Text>
@@ -144,7 +144,7 @@ export default function Tony() {
                              <View style={Styles.socialRow}>
                                 <Pressable 
                                     // Truco: Usamos un array [] para sobreescribir el color de fondo solo para este botón
-                                    style={[Styles.socialButton, { backgroundColor: '#000000', width: '100%' }]}
+                                    style={[Styles.socialButton, { backgroundColor: '#37474f', width: '100%' }]}
                                     onPress={() => Linking.openURL('https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8')} // Link de "We Are!" (One Piece)
                                 >
                                     <Entypo name="spotify" size={24} color="white" />
@@ -155,7 +155,7 @@ export default function Tony() {
                              <View style={Styles.socialRow}>
                                 <Pressable 
                                     // Truco: Usamos un array [] para sobreescribir el color de fondo solo para este botón
-                                    style={[Styles.socialButton, { backgroundColor: '#000000', width: '100%' }]}
+                                    style={[Styles.socialButton, { backgroundColor: '#37474f', width: '100%' }]}
                                     onPress={() => Linking.openURL('https://open.spotify.com/playlist/01yGP2T6zyXimoqWkl33yz?si=Hs7XPFx5ThCGDw9DOK8vhw')} // Link de "We Are!" (One Piece)
                                 >
                                     <Entypo name="spotify" size={24} color="white" />
@@ -166,7 +166,7 @@ export default function Tony() {
                              <View style={Styles.socialRow}>
                                 <Pressable 
                                     // Truco: Usamos un array [] para sobreescribir el color de fondo solo para este botón
-                                    style={[Styles.socialButton, { backgroundColor: '#000000', width: '100%' }]}
+                                    style={[Styles.socialButton, { backgroundColor: '#37474f', width: '100%' }]}
                                     onPress={() => Linking.openURL('https://open.spotify.com/track/1fLlRApgzxWweF1JTf8yM5?si=k1xB6KJlRHi2iSXIr9Z4mg')} // Link de "We Are!" (One Piece)
                                 >
                                     <Entypo name="spotify" size={24} color="white" />
@@ -177,7 +177,7 @@ export default function Tony() {
                              <View style={Styles.socialRow}>
                                 <Pressable 
                                     // Truco: Usamos un array [] para sobreescribir el color de fondo solo para este botón
-                                    style={[Styles.socialButton, { backgroundColor: '#000000', width: '100%' }]}
+                                    style={[Styles.socialButton, { backgroundColor: '#37474f', width: '100%' }]}
                                     onPress={() => Linking.openURL('https://open.spotify.com/track/03a359wbiUsjN9h6yzXvmS?si=_bIB-cveTKuh7akUsAnx3g')} // Link de "We Are!" (One Piece)
                                 >
                                     <Entypo name="spotify" size={24} color="white" />
@@ -188,7 +188,7 @@ export default function Tony() {
                              <View style={Styles.socialRow}>
                                 <Pressable 
                                     // Truco: Usamos un array [] para sobreescribir el color de fondo solo para este botón
-                                    style={[Styles.socialButton, { backgroundColor: '#000000', width: '100%' }]}
+                                    style={[Styles.socialButton, { backgroundColor: '#37474f', width: '100%' }]}
                                     onPress={() => Linking.openURL('https://open.spotify.com/playlist/3iQCEk1GikogqhCHUuzHds?si=UPuiECnJQW-AIadHoemfZA')} // Link de "We Are!" (One Piece)
                                 >
                                     <Entypo name="spotify" size={24} color="white" />

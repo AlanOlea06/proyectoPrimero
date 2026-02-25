@@ -20,7 +20,7 @@ export const diccionarioEquipo = {
   },
   Tony: {
     nombre: 'Tony',
-    descripcion: 'Un viejon bien cachondo',
+    descripcion: 'Me creo el duko y Me siento muy Severus Snape',
     imagen: require('../../assets/image/Tony.jpeg'),
     
   

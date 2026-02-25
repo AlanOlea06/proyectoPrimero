@@ -5,7 +5,7 @@ import { Animated, Pressable, StyleSheet, Text, View } from "react-native";
 const getBarColorForPerson = (nombre?: string) => {
   const colorMap: {[key: string]: string} = {
     'Ivan': '#000000',
-    'Alan': '#1a4d42',
+    'Alan': '#ffffff',
     'Tony': '#ffffff',
     'Diego': '#ffffff',
     'Paul': '#333232',
