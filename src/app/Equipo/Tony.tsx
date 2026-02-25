@@ -2,6 +2,7 @@ import { useLocalSearchParams } from "expo-router";
 import React from "react";
 import { Linking, Pressable, Image, ScrollView, Text, View } from "react-native";
 import { Styles } from "../EquipoStyles/Tony"; 
+import { AntDesign, Entypo } from '@expo/vector-icons';
 
 
 export default function Tony() {
@@ -115,27 +116,83 @@ export default function Tony() {
                             
 
                             {/* --- NUEVA SECCIÓN: REDES SOCIALES --- */}
+                       {/* --- SECCIÓN DE REDES Y MÚSICA --- */}
                         <View style={{marginTop: 20}}>
                              <Text style={Styles.subHeader}>CONNECT</Text>
-                             <Text style={Styles.cardTitle}>Follow Me  Please</Text>
+                             <Text style={Styles.cardTitle}>Follow Me & Vibe 🎧</Text>
                              
+                             {/* Fila 1: Redes Sociales */}
                              <View style={Styles.socialRow}>
-                                {/* Botón de Instagram */}
                                 <Pressable 
                                     style={Styles.socialButton} 
-                                    onPress={() => Linking.openURL('https://www.instagram.com/dan_f5018')}
+                                    onPress={() => Linking.openURL('https://www.instagram.com/tu_usuario')}
                                 >
-                                    <Text style={{fontSize: 18}}>📸</Text>
+                                    <AntDesign name="instagram" size={24} color="white" />
                                     <Text style={Styles.socialText}>Instagram</Text>
                                 </Pressable>
 
-                                {/* Botón de GitHub (o lo que quieras) */}
                                 <Pressable 
                                     style={Styles.socialButton}
-                                    onPress={() => Linking.openURL('https://github.com/DanielFlores235')}
+                                    onPress={() => Linking.openURL('https://github.com/tu_usuario')}
                                 >
-                                    <Text style={{fontSize: 18}}>🐙</Text>
+                                    <AntDesign name="github" size={24} color="white" />
                                     <Text style={Styles.socialText}>GitHub</Text>
+                                </Pressable>
+                             </View>
+
+                             {/* Fila 2: Spotify (Nuevo Botón) */}
+                             <View style={Styles.socialRow}>
+                                <Pressable 
+                                    // Truco: Usamos un array [] para sobreescribir el color de fondo solo para este botón
+                                    style={[Styles.socialButton, { backgroundColor: '#000000', width: '100%' }]}
+                                    onPress={() => Linking.openURL('https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8')} // Link de "We Are!" (One Piece)
+                                >
+                                    <Entypo name="spotify" size={24} color="white" />
+                                    <Text style={Styles.socialText}>My Favorite Song 🎵</Text>
+                                </Pressable>
+                             </View>
+
+                             <View style={Styles.socialRow}>
+                                <Pressable 
+                                    // Truco: Usamos un array [] para sobreescribir el color de fondo solo para este botón
+                                    style={[Styles.socialButton, { backgroundColor: '#000000', width: '100%' }]}
+                                    onPress={() => Linking.openURL('https://open.spotify.com/playlist/01yGP2T6zyXimoqWkl33yz?si=Hs7XPFx5ThCGDw9DOK8vhw')} // Link de "We Are!" (One Piece)
+                                >
+                                    <Entypo name="spotify" size={24} color="white" />
+                                    <Text style={Styles.socialText}>Para Recordar A Mi EX 🎵</Text>
+                                </Pressable>
+                             </View>
+
+                             <View style={Styles.socialRow}>
+                                <Pressable 
+                                    // Truco: Usamos un array [] para sobreescribir el color de fondo solo para este botón
+                                    style={[Styles.socialButton, { backgroundColor: '#000000', width: '100%' }]}
+                                    onPress={() => Linking.openURL('https://open.spotify.com/track/1fLlRApgzxWweF1JTf8yM5?si=k1xB6KJlRHi2iSXIr9Z4mg')} // Link de "We Are!" (One Piece)
+                                >
+                                    <Entypo name="spotify" size={24} color="white" />
+                                    <Text style={Styles.socialText}>Lo Mejor del Rock/Metal 🎵</Text>
+                                </Pressable>
+                             </View>
+
+                             <View style={Styles.socialRow}>
+                                <Pressable 
+                                    // Truco: Usamos un array [] para sobreescribir el color de fondo solo para este botón
+                                    style={[Styles.socialButton, { backgroundColor: '#000000', width: '100%' }]}
+                                    onPress={() => Linking.openURL('https://open.spotify.com/track/03a359wbiUsjN9h6yzXvmS?si=_bIB-cveTKuh7akUsAnx3g')} // Link de "We Are!" (One Piece)
+                                >
+                                    <Entypo name="spotify" size={24} color="white" />
+                                    <Text style={Styles.socialText}>La Mejor Cancion de Duko 🎵</Text>
+                                </Pressable>
+                             </View>
+
+                             <View style={Styles.socialRow}>
+                                <Pressable 
+                                    // Truco: Usamos un array [] para sobreescribir el color de fondo solo para este botón
+                                    style={[Styles.socialButton, { backgroundColor: '#000000', width: '100%' }]}
+                                    onPress={() => Linking.openURL('https://open.spotify.com/playlist/3iQCEk1GikogqhCHUuzHds?si=UPuiECnJQW-AIadHoemfZA')} // Link de "We Are!" (One Piece)
+                                >
+                                    <Entypo name="spotify" size={24} color="white" />
+                                    <Text style={Styles.socialText}>Musica Para Entrenar Pesado y al Fallo  🎵</Text>
                                 </Pressable>
                              </View>
                         </View>
@@ -169,8 +226,15 @@ export default function Tony() {
                                     <Text style={Styles.listText}>B2 (In Progress)</Text>
                                 </View>
                             </View>
-
                             
+                            <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>bis</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>Software Developer</Text>
+                                    <Text style={Styles.listText}>Carrer and engineer (In Progress)</Text>
+                                </View>
+                            </View>
+
                              <View style={Styles.listItem}>
                                 <Text style={Styles.listIcon}>🇺🇸</Text>
                                 <View>
@@ -178,6 +242,7 @@ export default function Tony() {
                                     <Text style={Styles.listText}>Proffesional Designer</Text>
                                 </View>
                             </View>
+                            
                         </View>
                     )}
 
