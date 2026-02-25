@@ -1,49 +1,198 @@
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
-import { Image, Text, View, ScrollView } from "react-native";
+import { Linking, Pressable, Image, ScrollView, Text, View } from "react-native";
 import { Styles } from "../EquipoStyles/Diego";
 
-export default function Tony() {
-    // 1. Read the 'mode' from the URL parameters
-    // Default to 'personal' if no mode is selected
-    const { nombre, descripcion, mode = 'personal' } = useLocalSearchParams();
+
+
+export default function Diego() {
+    const { nombre, mode = 'personal' } = useLocalSearchParams();
 
     return (
-        <ScrollView contentContainerStyle={Styles.content}>
-            <Text style={Styles.nombre}>{nombre || "Diego"}</Text>
+        <View style={Styles.mainContainer}>
             
-            <Image source={require('../../assets/image/Diego.jpeg')} style={Styles.imagen} />
-
-            {/* CONDITIONAL RENDERING AREA */}
-            <View style={{ marginTop: 20, padding: 10 }}>
+            {/* CHANGE: We removed the Header from here. 
+               Now the only direct child is the ScrollView.
+            */}
+            
+            <ScrollView 
+                style={{ flex: 1 }} 
+                contentContainerStyle={{ paddingBottom: 100 }} // Space for nav bar
+            >
                 
-                {mode === 'personal' && (
-                    <View>
-                        <Text style={{fontSize: 22, fontWeight: 'bold'}}>Personal Tastes </Text>
-                        <Text>• Me encanta el fornite</Text>
-                        <Text>• Lo juego todo el dia</Text>
-                        <Text>• Hobby: Gym </Text>
-                    </View>
-                )}
+                {/* 1. HEADER (Now inside the ScrollView) 
+                   Since it is inside, it will scroll up and disappear 
+                   when you move down.
+                */}
+                <View style={Styles.headerContainer}>
+                    <Image 
+                        source={require('../../assets/image/Diego.jpeg')} 
+                        style={Styles.avatar} 
+                    />
+                    <Text style={Styles.headerName}>{nombre || "Diego"}</Text>
+                    <Text style={Styles.headerBio}>
+                        Soy Jugador profesional de Obbys en Roblox{'\n'}
+                        
+                    </Text>
+                </View>
 
-                {mode === 'professional' && (
-                    <View>
-                        <Text style={{fontSize: 22, fontWeight: 'bold'}}>Professional Skills </Text>
-                        <Text>• React Native </Text>
-                        <Text>• Python </Text> 
-                        <Text>• C# Developer </Text>
-                        <Text>• English Level: B2 (In Progress)</Text>
-                    </View>
-                )}
+                {/* 2. THE CONTENT SECTIONS */}
+                <View style={{ padding: 25 }}> 
+                
+                    {mode === 'personal' && (
+                        <View style={Styles.section}>
+                            <Text style={Styles.subHeader}>LIFESTYLE</Text>
+                            <Text style={Styles.title}>Personal Tastes</Text>
+                            
+                            <View style={Styles.cardBeige}>
+                                <Text style={Styles.cardTitle}>Favorite Quote 🏴‍☠️</Text>
+                                <Text style={Styles.cardText}>
+                                    "When do you think people die? When they are forgotten!"
+                                </Text>
+                            </View>
 
-                {mode === 'pictures' && (
-                    <View>
-                        <Text style={{fontSize: 22, fontWeight: 'bold'}}>Gallery 📸</Text>
-                        <Text>No photos yet...</Text>
-                    </View>
-                )}
+                            <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>📺</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>Top Anime</Text>
+                                    <Text style={Styles.listText}>One Piece,</Text>
+                                </View>
+                            </View>
 
-            </View>
-        </ScrollView>
+                            <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>📺</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>Top Movie</Text>
+                                    <Text style={Styles.listText}>Harry Potter</Text>
+                                </View>
+                            </View>
+                            
+                            <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>📺</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>Best Character</Text>
+                                    <Text style={Styles.listText}>Severus Snape</Text>
+                                </View>
+                            </View>
+
+                             <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>🧑‍🦰</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>My Brothers</Text>
+                                    <Text style={Styles.listText}>David Flores, Oscar, Andres Soid Flores</Text>
+                                </View>
+                            </View>
+
+                             <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>👩‍🦰</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>My Sister </Text>
+                                    <Text style={Styles.listText}>Pricila</Text>
+                                </View>
+                            </View>
+
+                             <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>❤️</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>My Friends</Text>
+                                    <Text style={Styles.listText}>Alan, Paul, Litzy, Diego</Text>
+                                </View>
+                            </View>
+                                                         <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>😎</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>Ecotrack</Text>
+                                    <Text style={Styles.listText}>Jesus Burciaga, Eduardo Mandujano, Julian Ruizs</Text>
+                                </View>
+                            </View>
+
+                              <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>🎤</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>My Favourite bands and Singers</Text>
+                                    <Text style={Styles.listText}>Linkin Park, Red Hot Chilli Peppers, Kevin Karl, Ed Maveric</Text>
+                                </View>
+                            </View>
+
+                            {/* --- NUEVA SECCIÓN: REDES SOCIALES --- */}
+                        <View style={{marginTop: 20}}>
+                             <Text style={Styles.subHeader}>CONNECT</Text>
+                             <Text style={Styles.cardTitle}>Follow Me  Please</Text>
+                             
+                             <View style={Styles.socialRow}>
+                                {/* Botón de Instagram */}
+                                <Pressable 
+                                    style={Styles.socialButton} 
+                                    onPress={() => Linking.openURL('https://www.instagram.com/dan_f5018')}
+                                >
+                                    <Text style={{fontSize: 18}}>📸</Text>
+                                    <Text style={Styles.socialText}>Instagram</Text>
+                                </Pressable>
+
+                                {/* Botón de GitHub (o lo que quieras) */}
+                                <Pressable 
+                                    style={Styles.socialButton}
+                                    onPress={() => Linking.openURL('https://github.com/DanielFlores235')}
+                                >
+                                    <Text style={{fontSize: 18}}>🐙</Text>
+                                    <Text style={Styles.socialText}>GitHub</Text>
+                                </Pressable>
+                             </View>
+                        </View>
+                        </View>
+                    )}
+
+                    {mode === 'professional' && (
+                        <View style={Styles.section}>
+                            <Text style={Styles.subHeader}>CAREER</Text>
+                            <Text style={Styles.title}>Professional Skills</Text>
+                            
+                            <View style={Styles.skillRow}>
+                                <Text style={Styles.skillTag}>React Native</Text>
+                                <Text style={Styles.skillTag}>Python</Text>
+                                <Text style={Styles.skillTag}>C#</Text>
+                                <Text style={Styles.skillTag}>SQL</Text>
+                                <Text style={Styles.skillTag}>Pseint</Text>
+                                <Text style={Styles.skillTag}>Figma</Text>
+                                <Text style={Styles.skillTag}>Draw.io</Text>
+                                <Text style={Styles.skillTag}>Adobe Ilustrator</Text>
+                                <Text style={Styles.skillTag}>Adobe After Efects</Text>
+                                <Text style={Styles.skillTag}>AutoCad</Text>
+                                <Text style={Styles.skillTag}>SolidSworks</Text>
+                                <Text style={Styles.skillTag}>Artist</Text>
+                            </View>
+
+                            <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>🇺🇸</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>English Level</Text>
+                                    <Text style={Styles.listText}>B2 (In Progress)</Text>
+                                </View>
+                            </View>
+
+                             <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>🇺🇸</Text>
+                                <View>
+                                    <Text style={Styles.listTitle}>Graphic Designer</Text>
+                                    <Text style={Styles.listText}>Proffesional Designer</Text>
+                                </View>
+                            </View>
+                        </View>
+                    )}
+
+                    {mode === 'pictures' && (
+                        <View style={Styles.section}>
+                            <Text style={Styles.subHeader}>MEMORIES</Text>
+                            <Text style={Styles.title}>Gallery 📸</Text>
+                            
+                            <View style={Styles.galleryGrid}>
+                                
+                            </View>
+                        </View>
+                    )}
+                </View>
+
+            </ScrollView>
+        </View>
     );
 }

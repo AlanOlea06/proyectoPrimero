@@ -10,17 +10,17 @@ export const diccionarioEquipo = {
   },
   Ivan: {
     nombre: 'Ivan',
-    descripcion: 'Esta es la descripción de Ivan',
+    descripcion: 'Presiona aqui para enamorarte',
     imagen: require('../../assets/image/ivan.jpeg')
   },
   Diego: {
     nombre: 'Diego',
-    descripcion: 'Esta es la descripción de Diego',
+    descripcion: 'Diego el mas Lo Sano',
     imagen: require('../../assets/image/Diego.jpeg')
   },
   Tony: {
     nombre: 'Tony',
-    descripcion: 'No se porta bonito',
+    descripcion: 'Un viejon bien cachondo',
     imagen: require('../../assets/image/Tony.jpeg'),
     
   
