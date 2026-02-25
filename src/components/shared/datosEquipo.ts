@@ -10,7 +10,7 @@ export const diccionarioEquipo = {
   },
   Ivan: {
     nombre: 'Ivan',
-    descripcion: 'Esta es la descripción de Ivan',
+    descripcion: 'Presiona aqui para enamorarte',
     imagen: require('../../assets/image/ivan.jpeg')
   },
   Diego: {
@@ -20,7 +20,7 @@ export const diccionarioEquipo = {
   },
   Tony: {
     nombre: 'Tony',
-    descripcion: 'No se porta bonito',
+    descripcion: 'Un viejon bien cachondo',
     imagen: require('../../assets/image/Tony.jpeg'),
     
   

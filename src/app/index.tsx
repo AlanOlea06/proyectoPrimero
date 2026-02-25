@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import { diccionarioEquipo } from "../components/shared/datosEquipo";
 import { Tarjeta } from "../components/Tarjeta";
 import { Styles } from "../styles/Styles";
@@ -9,16 +9,23 @@ export default function Index() {
   const tarjetas = Object.values(diccionarioEquipo);
 
   return (
-    <View style={Styles.inicio}>
-      {/* 2. Ahora iteramos sobre los objetos ("persona") en lugar de solo strings */}
-      {tarjetas.map((persona, index) => (
-        <Tarjeta 
-          key={index} 
-          nombre={persona.nombre} // Sacamos el nombre del objeto
-          descripcion={persona.descripcion} 
-          imagen={persona.imagen} // Le pasamos la imagen ya requerida a tu componente
-        />
-      ))}
+    <View style={Styles.mainContainer}>
+      <ScrollView 
+        style={{ flex: 1 }} 
+        contentContainerStyle={{ paddingBottom: 100 }}
+      >
+        <View style={Styles.inicio}>
+          {/* Iteramos sobre los objetos ("persona") en lugar de solo strings */}
+          {tarjetas.map((persona, index) => (
+            <Tarjeta 
+              key={index} 
+              nombre={persona.nombre}
+              descripcion={persona.descripcion} 
+              imagen={persona.imagen}
+            />
+          ))}
+        </View>
+      </ScrollView>
     </View>
   );
 }
