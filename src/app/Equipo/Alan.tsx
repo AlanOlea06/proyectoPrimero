@@ -6,39 +6,46 @@ import { useLocalSearchParams } from "expo-router";
 import { Styles } from "../EquipoStyles/Alan";
 
 export const Alan = () => {
-    const Alan = diccionarioEquipo.Alan;
-    const { mode = 'personal' } = useLocalSearchParams(); // Aquí puedes cambiar el modo para probar diferentes vistas
+	const Alan = diccionarioEquipo.Alan;
+	const { mode = 'personal' } = useLocalSearchParams(); // Aquí puedes cambiar el modo para probar diferentes vistas
 
-    return (
-        <ScrollView style={Styles.content}>
-            <View style={{ marginTop: 20, padding: 10 }}>
+	return (
+		<ScrollView>
+			<View style={Styles.constant}>
+				<Image source={Alan.imagen} style={Styles.imagen} />
+				<Text>Alan Olea Batres</Text>
+				<Text>DSBIS41M</Text>
+				<Text>Tecnologias de la informacion</Text>
+			</View>
+			<View style={Styles.content}>
+				{mode === 'personal' && (
+					<View>
+						
+						<Text style={Styles.DescripcionLarga}>{Alan.DescripcionLarga}</Text>
+					</View>
+				)}
 
-                {mode === 'personal' && (
-                    <View>
-                        <Image source={Alan.imagen} style={Styles.imagen} />
-                        <Text style={Styles.DescripcionLarga}>{Alan.DescripcionLarga}</Text>
-                    </View>
-                )}
+				{mode === 'professional' && (
+					<View>
+						<Text style={{ fontSize: 22, fontWeight: 'bold' }}>Professional Skills </Text>
+						<View >
+							<Text style={Styles.habilidades}>React Native </Text>
+							<Text>Python </Text>
+							<Text>C# Developer </Text>
+							<Text>English Level: B1</Text>
+						</View>
+					</View>
+				)}
 
-                {mode === 'professional' && (
-                    <View>
-                        <Text style={{ fontSize: 22, fontWeight: 'bold' }}>Professional Skills </Text>
-                        <Text>• React Native </Text>
-                        <Text>• Python </Text>
-                        <Text>• C# Developer </Text>
-                        <Text>• English Level: B2 (In Progress)</Text>
-                    </View>
-                )}
-
-                {mode === 'pictures' && (
-                    <View>
-                        <Text style={{ fontSize: 22, fontWeight: 'bold' }}>Gallery 📸</Text>
-                        <Text>No photos yet...</Text>
-                    </View>
-                )}
-            </View>
-        </ScrollView>
-    )
+				{mode === 'pictures' && (
+					<View>
+						<Text style={{ fontSize: 22, fontWeight: 'bold' }}>Gallery 📸</Text>
+						<Text>No photos yet...</Text>
+					</View>
+				)}
+			</View>
+		</ScrollView>
+	)
 }
 
 export default Alan;

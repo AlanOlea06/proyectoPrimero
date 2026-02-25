@@ -1,58 +1,59 @@
 import { StyleSheet } from 'react-native';
 
 export const Styles = StyleSheet.create({
-    // --- MAIN LAYOUT ---
+    // Mi Layout
     mainContainer: {
         flex: 1,
-        backgroundColor: '#FFFFFF', // Clean white background
+        backgroundColor: '#000000', // Clean white background
     },
     scrollContent: {
         padding: 25,
-        paddingBottom: 100, // Extra space at bottom so Navigation Bar doesn't cover content
+        paddingBottom: 100, // Ponemos espacio extra al final para que la barra no tape nada
     },
     section: {
         marginBottom: 25,
     },
 
-    // --- HEADER HERO (The Dark Teal Top) ---
+    // Header
     headerContainer: {
-        backgroundColor: '#004d40', // Professional Dark Teal
-        paddingTop: 10,
-        paddingBottom: 5,
-        paddingHorizontal: 50,
-        alignItems: 'center',
-        elevation: 10,               // Shadow for Android
-        shadowColor: "#000",         // Shadow for iOS
+        flexDirection: 'row', 
+        backgroundColor: '#0b006b', 
+        paddingTop: 45,
+        paddingBottom: 50,
+        paddingHorizontal: 20, 
+        alignItems: 'center', 
+        elevation: 10,              // Shadow for Android
+        shadowColor: "#000",        // Shadow for iOS
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.3,
         shadowRadius: 5,
     },
-    avatar: {
-        width: 120,
-        height: 120,
-        borderRadius: 60, // Perfect circle
-        borderWidth: 4,
-        borderColor: '#ffffff',
-        marginBottom: 15,
+    image: {
+        width: 180,
+        height: 180,
+        marginRight: 20, 
+    },
+    textContainer: {
+        flex: 1, // Hace que los textos tomen todo el espacio restante
     },
     headerName: {
-        fontSize: 32,
+        fontSize: 40,
         fontWeight: 'bold',
         color: '#ffffff',
         marginBottom: 5,
-        // fontFamily: 'OdorMeanChey', // Uncomment if you want the custom font
+        fontFamily: 'OdorMeanChey',
     },
     headerBio: {
-        color: '#b2dfdb', // Light mint text
-        textAlign: 'center',
-        fontSize: 14,
-        lineHeight: 20,
-        maxWidth: '85%',
+        color: '#b2dfdb',
+        textAlign: 'left',
+        fontSize: 20,
+        lineHeight: 25,
+        paddingBottom: 10,
     },
 
-    // --- TYPOGRAPHY ---
+    // Tipografía
     subHeader: {
-        color: '#00796b', // Teal accent color
+        color: '#ffffff', // Teal accent color
         fontSize: 12,
         fontWeight: 'bold',
         letterSpacing: 1.5,
@@ -62,33 +63,33 @@ export const Styles = StyleSheet.create({
     title: {
         fontSize: 28,
         fontWeight: 'bold',
-        color: '#102027', // Dark gray/black
+        color: '#9ddef1', // Dark gray/black
         marginBottom: 15,
     },
 
-    // --- CARDS (The Beige Box) ---
-    cardBeige: {
-        backgroundColor: '#fff3e0', // Soft Beige
+    // Cards
+    cardChivas: {
+        backgroundColor: '#ffffff',
         padding: 20,
         borderRadius: 15,
         marginBottom: 20,
         borderLeftWidth: 5,
-        borderLeftColor: '#ff6f00', // Orange accent line
+        borderLeftColor: '#0e0cb4',
     },
     cardTitle: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#e65100',
+        color: '#08002c',
         marginBottom: 5,
     },
     cardText: {
         color: '#5d4037',
-        fontSize: 15,
+        fontSize: 18,
         fontStyle: 'italic',
         lineHeight: 22,
     },
 
-    // --- LIST ITEMS (The Rows) ---
+    // List Items
     listItem: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -102,13 +103,13 @@ export const Styles = StyleSheet.create({
         marginRight: 15,
     },
     listTitle: {
-        fontSize: 16,
+        fontSize: 20,
         fontWeight: 'bold',
         color: '#37474f',
     },
     listText: {
         color: '#78909c',
-        fontSize: 14,
+        fontSize: 18,
         marginTop: 2,
     },
 
@@ -145,31 +146,22 @@ export const Styles = StyleSheet.create({
         marginHorizontal: 20, // Space between rows
         resizeMode: 'cover', // Ensures image fills the square without distortion
     },
-    // ... (el resto de tus estilos anteriores)
 
-    // --- SOCIAL MEDIA ---
-    socialRow: {
-        flexDirection: 'row',
-        gap: 15, // Espacio entre botones
-        marginTop: 10,
-        marginBottom: 20,
-    },
+    // Boton del Insta
     socialButton: {
-        backgroundColor: '#263238', // Color oscuro elegante
+        backgroundColor: '#ffffff', // Color oscuro elegante
         paddingVertical: 12,
-        paddingHorizontal: 20,
+        paddingHorizontal: 10,
+        width: 90,
+        height: 50,
         borderRadius: 25,
         flexDirection: 'row',
         alignItems: 'center',
         elevation: 3, // Sombra suave
     },
     socialText: {
-        color: '#ffffff',
+        color: '#000000',
         fontWeight: 'bold',
         fontSize: 14,
-        marginLeft: 8, // Espacio entre el icono y el texto
     }
 });
-
-
-export default Styles;
