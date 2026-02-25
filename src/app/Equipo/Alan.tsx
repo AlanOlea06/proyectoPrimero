@@ -1,8 +1,7 @@
+import { useLocalSearchParams } from "expo-router";
 import React from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 import { diccionarioEquipo } from "../../components/shared/datosEquipo";
-//import { NavegationBar } from "../../components/shared/NavegationBar";
-import { useLocalSearchParams } from "expo-router";
 import { Styles } from "../EquipoStyles/Alan";
 
 export const Alan = () => {
@@ -14,15 +13,16 @@ export const Alan = () => {
 			<View style={Styles.constant}>
 				<Image source={Alan.imagen} style={Styles.imagen} />
 				<View style={Styles.textConstant}>
-					<Text style = {{color: '#ffffff', fontSize: 18}}>Alan Olea Batres</Text>
-					<Text style = {{color: '#ffffff', fontSize: 14}}>Grupo: DSBIS41M</Text>
-					<Text style = {{color: '#ffffff', fontSize: 14}}>Carrera: Tecnologias de la informacion</Text>
+					<Text style={{ ...Styles.text, fontSize: 24 }}>Alan Olea Batres</Text>
+					<Text style={Styles.text}>Grupo: DSBIS41M</Text>
+					<Text style={Styles.text}>Carrera: Tecnologias de la informacion</Text>
 				</View>
 			</View>
+
 			<View style={Styles.content}>
 				{mode === 'personal' && (
 					<View>
-						
+						<Text style={{ fontSize: 22, fontWeight: 'bold' }}>Personal Description</Text>
 						<Text style={Styles.DescripcionLarga}>{Alan.DescripcionLarga}</Text>
 					</View>
 				)}
@@ -30,11 +30,35 @@ export const Alan = () => {
 				{mode === 'professional' && (
 					<View>
 						<Text style={{ fontSize: 22, fontWeight: 'bold' }}>Professional Skills </Text>
-						<View >
+						<View style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 10 }}>
 							<Text style={Styles.habilidades}>React Native </Text>
-							<Text>Python </Text>
-							<Text>C# Developer </Text>
-							<Text>English Level: B1</Text>
+							<Text style={Styles.habilidades}>Python </Text>
+							<Text style={Styles.habilidades}>C# </Text>
+							<Text style={Styles.habilidades}>English Level: B1</Text>
+						</View>
+						<View style={{ marginTop: 20 }}>
+							<Text>Perfil Técnico y Profesional</Text>
+							<View>
+							<Text>Desarrollo Full-Stack</Text>
+							<Text style={Styles.parrafo}>Dominio de Next.js y React para aplicaciones web de alto rendimiento, junto con experiencia activa en el desarrollo de aplicaciones móviles.	</Text>
+							</View>
+							<View>
+								<Text>Lógica de Programación</Text>
+								<Text style={Styles.parrafo}>Capacidad sólida para resolver problemas complejos, diseñar algoritmos y estructurar bases de código eficientes.	</Text>
+							</View>
+							
+							<View>
+								<Text>Perfil Bilingüe</Text>
+								<Text style={Styles.parrafo}>Formación académica en el modelo BIS, lo que me permite desenvolverme con fluidez en entornos técnicos en inglés.	</Text>
+							</View>
+							<View>
+								<Text>Gestión de Proyectos</Text>
+								<Text style={Styles.parrafo}>Disciplina para equilibrar mi formación en el cuarto cuatrimestre de la carrera con el desarrollo de proyectos personales y aplicaciones reales.</Text>
+							</View>
+							<View>
+								<Text>Adaptabilidad</Text>
+								<Text style={Styles.parrafo}>Facilidad para aprender nuevas tecnologías y aplicarlas rápidamente a soluciones prácticas.</Text>
+							</View>
 						</View>
 					</View>
 				)}
