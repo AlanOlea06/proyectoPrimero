@@ -25,7 +25,12 @@ export const Styles = StyleSheet.create({
         alignSelf: 'flex-start', // Hace que el ancho sea solo el del contenido
         paddingHorizontal: 10,   // Da espacio a los lados del texto
         paddingVertical: 2,      // Da espacio arriba y abajo
-        //marginBottom: 5,
+        marginBottom: 5,
+        marginRight: 10,
+    },
+    parrafo: {
+        marginTop: 10,
+        fontSize: 16,
     },
     constant: {
         marginBottom: 20,
@@ -43,6 +48,11 @@ export const Styles = StyleSheet.create({
         width: '80%',
         height: '80%',
 
+    },
+    text: {
+        color: '#ffffff',
+        fontSize: 18,
+        fontWeight: 'bold',
     }
 });
 
