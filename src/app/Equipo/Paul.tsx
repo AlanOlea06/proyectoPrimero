@@ -69,6 +69,7 @@ export const Paul = () => {
               />
           </View>
         </ScrollView>
+        
     );
 };
 

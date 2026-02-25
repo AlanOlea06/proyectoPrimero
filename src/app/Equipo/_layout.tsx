@@ -8,7 +8,7 @@ export default function EquipoLayout() {
       {/* 1. The 'Slot' (Tony/Alan) gets flex: 1 to take all available space.
          We add a container here to ensure the bar doesn't cover the bottom content.
       */}
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1,  }}>
         <Slot />
       </View>
       

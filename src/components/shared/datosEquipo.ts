@@ -28,6 +28,6 @@ export const diccionarioEquipo = {
   Paul: {
     nombre: 'Paul',
     descripcion: 'Hola soy paul hdeiuhaiuwhiuhwahiuhwa',
-    imagen: require('../../assets/image/maya.png')
+    imagen: require('../../assets/image/Paul.jpeg')
   }
 };
