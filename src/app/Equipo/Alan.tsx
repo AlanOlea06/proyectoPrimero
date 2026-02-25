@@ -13,9 +13,11 @@ export const Alan = () => {
 		<ScrollView>
 			<View style={Styles.constant}>
 				<Image source={Alan.imagen} style={Styles.imagen} />
-				<Text>Alan Olea Batres</Text>
-				<Text>DSBIS41M</Text>
-				<Text>Tecnologias de la informacion</Text>
+				<View style={Styles.textConstant}>
+					<Text style = {{color: '#ffffff', fontSize: 18}}>Alan Olea Batres</Text>
+					<Text style = {{color: '#ffffff', fontSize: 14}}>Grupo: DSBIS41M</Text>
+					<Text style = {{color: '#ffffff', fontSize: 14}}>Carrera: Tecnologias de la informacion</Text>
+				</View>
 			</View>
 			<View style={Styles.content}>
 				{mode === 'personal' && (
