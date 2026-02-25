@@ -15,7 +15,7 @@ export const diccionarioEquipo = {
   },
   Diego: {
     nombre: 'Diego',
-    descripcion: 'Esta es la descripción de Diego',
+    descripcion: 'Diego el mas Lo Sano',
     imagen: require('../../assets/image/Diego.jpeg')
   },
   Tony: {

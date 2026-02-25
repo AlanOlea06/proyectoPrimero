@@ -9,16 +9,21 @@ export const Styles = StyleSheet.create({
     imagen: {
         width: 400,
         height: 200,
+        margin: '2%',
+        borderRadius: 5
     },
     DescripcionLarga: {
         marginTop: 20,
         fontSize: 16,
     },
+    habilidades: {
+        backgroundColor: 'red',
 
-
-    nombre: {
-        flex: 1,
-        fontSize: 30,
+    },
+    constant: {
+        marginBottom: 20,
+        width: '100%',
+        backgroundColor: '#0b9387'
     }
 });
 
