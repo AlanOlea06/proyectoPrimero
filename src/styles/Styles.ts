@@ -22,7 +22,7 @@ export const Styles = StyleSheet.create({
         fontSize: 35,
         fontWeight: 'bold',
         color: 'black',
-        fontFamily: 'Odor Mean Chey, serif',
+        fontFamily: 'OdorMeanChey',
     },
 
     topBarTarjeta: {
@@ -39,11 +39,12 @@ export const Styles = StyleSheet.create({
         padding: 35,
         height: "100%",
         margin: 'auto',
-        fontFamily: 'Odor Mean Chey, serif',
+        fontFamily: 'OdorMeanChey',
         fontSize: 25,
     },
     imagen:{
         width: 100,
         height: '100%',
     },
-});
+}
+);
