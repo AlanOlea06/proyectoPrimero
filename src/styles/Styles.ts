@@ -22,7 +22,7 @@ export const Styles = StyleSheet.create({
         fontSize: 35,
         fontWeight: 'bold',
         color: 'black',
-        fontFamily: 'Odor Mean Chey, serif',
+        fontFamily: 'Odor  Mean Chey, serif',
     },
 
     topBarTarjeta: {
