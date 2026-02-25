@@ -31,7 +31,7 @@ export default function Tony() {
                     <Text style={Styles.headerName}>{nombre || "Tony"}</Text>
                     <Text style={Styles.headerBio}>
                         Creative Developer & Gym Rat 🏋️‍♂️.{'\n'}
-                        "Codes in C#, Dreams in One Piece."
+                        "Codes in C#, I'll love you Forever."
                     </Text>
                 </View>
 
@@ -46,7 +46,7 @@ export default function Tony() {
                             <View style={Styles.cardBeige}>
                                 <Text style={Styles.cardTitle}>Favorite Quote 🏴‍☠️</Text>
                                 <Text style={Styles.cardText}>
-                                    "When do you think people die? When they are forgotten!"
+                                    "My magic is not giving up"
                                 </Text>
                             </View>
 
@@ -94,14 +94,14 @@ export default function Tony() {
                                 <Text style={Styles.listIcon}>❤️</Text>
                                 <View>
                                     <Text style={Styles.listTitle}>My Friends</Text>
-                                    <Text style={Styles.listText}>Alan, Paul, Litzy, Diego</Text>
+                                    <Text style={Styles.listText}>Alan, Paul, Litzy, Diego, Ivan, Alam Grandote, Brenda, Yahir, Pelon, Jesus, Edu</Text>
                                 </View>
                             </View>
-                                                         <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>😎</Text>
+                            <View style={Styles.listItem}>
+                                <Text style={Styles.listIcon}>🎵</Text>
                                 <View>
-                                    <Text style={Styles.listTitle}>Ecotrack</Text>
-                                    <Text style={Styles.listText}>Jesus Burciaga, Eduardo Mandujano, Julian Ruizs</Text>
+                                    <Text style={Styles.listTitle}>Canciones Favoritas</Text>
+                                    <Text style={Styles.listText}>She don't give a fo, Buscarte Lejos y BZRP de Milo J</Text>
                                 </View>
                             </View>
 
@@ -109,9 +109,10 @@ export default function Tony() {
                                 <Text style={Styles.listIcon}>🎤</Text>
                                 <View>
                                     <Text style={Styles.listTitle}>My Favourite bands and Singers</Text>
-                                    <Text style={Styles.listText}>Linkin Park, Red Hot Chilli Peppers, Kevin Karl, Ed Maveric</Text>
+                                    <Text style={Styles.listText}>Duki, Linkin Park, Red Hot Chilli Peppers, Kevin Karl, Ed Maveric</Text>
                                 </View>
                             </View>
+                            
 
                             {/* --- NUEVA SECCIÓN: REDES SOCIALES --- */}
                         <View style={{marginTop: 20}}>
@@ -157,7 +158,7 @@ export default function Tony() {
                                 <Text style={Styles.skillTag}>Adobe Ilustrator</Text>
                                 <Text style={Styles.skillTag}>Adobe After Efects</Text>
                                 <Text style={Styles.skillTag}>AutoCad</Text>
-                                <Text style={Styles.skillTag}>SolidSworks</Text>
+                                <Text style={Styles.skillTag}>Solidworks</Text>
                                 <Text style={Styles.skillTag}>Artist</Text>
                             </View>
 
@@ -169,6 +170,7 @@ export default function Tony() {
                                 </View>
                             </View>
 
+                            
                              <View style={Styles.listItem}>
                                 <Text style={Styles.listIcon}>🇺🇸</Text>
                                 <View>
@@ -202,6 +204,20 @@ export default function Tony() {
                                 <Image source={require('../../assets/image/TonyImages/Tony19.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/TonyImages/Tony20.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/TonyImages/Tony21.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/Eco.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/Eco2.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/EsoBrad.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/Conalep.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/EsoBrad2.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/TpDiegue2.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/DaniFlow2.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/MyFamili.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/Chino.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/Maluma.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/Priscila.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/FlowCabron.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/TonyImages/Concierto.jpeg')} style={Styles.galleryImage} />
+
                             </View>
                         </View>
                     )}
