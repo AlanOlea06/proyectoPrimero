@@ -31,7 +31,7 @@ export default function FinbalanceLogo({
       <text
         x="40"
         y="38"
-        fontFamily="Odor Mean Chey"
+        fontFamily="Odor Mean Chey, serif"
         fontSize="36"
         fill={variant === "light" ? boxTextColor : darkBoxTextColor}
         textAnchor="middle"
@@ -43,7 +43,7 @@ export default function FinbalanceLogo({
       <text
         x="71"
         y="38"
-        fontFamily="Odor Mean Chey"
+        fontFamily="Odor Mean Chey, serif"
         fontSize="36"
         fill={variant === "light" ? textColor : darkTextColor}
       >
