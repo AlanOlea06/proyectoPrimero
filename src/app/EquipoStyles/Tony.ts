@@ -4,7 +4,7 @@ export const Styles = StyleSheet.create({
     // --- MAIN LAYOUT ---
     mainContainer: {
         flex: 1,
-        backgroundColor: '#FFFFFF', // Clean white background
+        backgroundColor: '#ffffff', // Clean white background
     },
     scrollContent: {
         padding: 25,

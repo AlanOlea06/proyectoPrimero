@@ -31,7 +31,7 @@ export default function Diego() {
                     />
                     <Text style={Styles.headerName}>{nombre || "Diego"}</Text>
                     <Text style={Styles.headerBio}>
-                        Soy Jugador profesional de Obbys en Roblox{'\n'}
+                        Soy Un Ticsito no tan Ticsito{'\n'}
                         
                     </Text>
                 </View>
@@ -45,98 +45,84 @@ export default function Diego() {
                             <Text style={Styles.title}>Personal Tastes</Text>
                             
                             <View style={Styles.cardBeige}>
-                                <Text style={Styles.cardTitle}>Favorite Quote 🏴‍☠️</Text>
+                                <Text style={Styles.cardTitle}>Soy el Rayo Mc Queen</Text>
                                 <Text style={Styles.cardText}>
-                                    "When do you think people die? When they are forgotten!"
+                                    "Soy Veloz"
                                 </Text>
                             </View>
 
                             <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>📺</Text>
+                                
                                 <View>
-                                    <Text style={Styles.listTitle}>Top Anime</Text>
-                                    <Text style={Styles.listText}>One Piece,</Text>
+                                    <Text style={Styles.listTitle}>Mi Animal Favorito</Text>
+                                    <Text style={Styles.listText}>Mapache</Text>
                                 </View>
                             </View>
 
                             <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>📺</Text>
+                                
                                 <View>
-                                    <Text style={Styles.listTitle}>Top Movie</Text>
-                                    <Text style={Styles.listText}>Harry Potter</Text>
+                                    <Text style={Styles.listTitle}>La mejor Pelicula del mundo</Text>
+                                    <Text style={Styles.listText}>Cars</Text>
                                 </View>
                             </View>
                             
                             <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>📺</Text>
+                                
                                 <View>
-                                    <Text style={Styles.listTitle}>Best Character</Text>
-                                    <Text style={Styles.listText}>Severus Snape</Text>
+                                    <Text style={Styles.listTitle}>Mi artista fav</Text>
+                                    <Text style={Styles.listText}>Paulo Londra</Text>
                                 </View>
                             </View>
 
                              <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>🧑‍🦰</Text>
+                                
                                 <View>
-                                    <Text style={Styles.listTitle}>My Brothers</Text>
-                                    <Text style={Styles.listText}>David Flores, Oscar, Andres Soid Flores</Text>
+                                    <Text style={Styles.listTitle}>Mi comida Fav</Text>
+                                    <Text style={Styles.listText}>Hamburguesas</Text>
                                 </View>
                             </View>
 
                              <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>👩‍🦰</Text>
+                                
                                 <View>
-                                    <Text style={Styles.listTitle}>My Sister </Text>
-                                    <Text style={Styles.listText}>Pricila</Text>
+                                    <Text style={Styles.listTitle}>Mascotas </Text>
+                                    <Text style={Styles.listText}>Tengo uno perrito French Poodle</Text>
                                 </View>
                             </View>
 
                              <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>❤️</Text>
+                                
                                 <View>
-                                    <Text style={Styles.listTitle}>My Friends</Text>
-                                    <Text style={Styles.listText}>Alan, Paul, Litzy, Diego</Text>
+                                    <Text style={Styles.listTitle}>Hobbies</Text>
+                                    <Text style={Styles.listText}>Natacion, Futbol, videojuegos</Text>
                                 </View>
                             </View>
-                                                         <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>😎</Text>
+                                <View style={Styles.listItem}>
+            
                                 <View>
-                                    <Text style={Styles.listTitle}>Ecotrack</Text>
-                                    <Text style={Styles.listText}>Jesus Burciaga, Eduardo Mandujano, Julian Ruizs</Text>
+                                    <Text style={Styles.listTitle}>Siempre del mejor Equipo</Text>
+                                    <Text style={Styles.listText}>FC Barcelona</Text>
                                 </View>
                             </View>
 
-                              <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>🎤</Text>
-                                <View>
-                                    <Text style={Styles.listTitle}>My Favourite bands and Singers</Text>
-                                    <Text style={Styles.listText}>Linkin Park, Red Hot Chilli Peppers, Kevin Karl, Ed Maveric</Text>
-                                </View>
-                            </View>
+                            
+                            
 
                             {/* --- NUEVA SECCIÓN: REDES SOCIALES --- */}
                         <View style={{marginTop: 20}}>
                              <Text style={Styles.subHeader}>CONNECT</Text>
-                             <Text style={Styles.cardTitle}>Follow Me  Please</Text>
+                             <Text style={Styles.cardTitle}>Sigueme si quieres</Text>
                              
                              <View style={Styles.socialRow}>
                                 {/* Botón de Instagram */}
-                                <Pressable 
-                                    style={Styles.socialButton} 
-                                    onPress={() => Linking.openURL('https://www.instagram.com/dan_f5018')}
-                                >
+                                <View style={Styles.galleryGrid}>
+                                <Image source={require('../../assets/image/Insta.jpeg')} style={Styles.galleryImage} />
+                                
+                            </View>
                                     <Text style={{fontSize: 18}}>📸</Text>
                                     <Text style={Styles.socialText}>Instagram</Text>
-                                </Pressable>
-
-                                {/* Botón de GitHub (o lo que quieras) */}
-                                <Pressable 
-                                    style={Styles.socialButton}
-                                    onPress={() => Linking.openURL('https://github.com/DanielFlores235')}
-                                >
-                                    <Text style={{fontSize: 18}}>🐙</Text>
-                                    <Text style={Styles.socialText}>GitHub</Text>
-                                </Pressable>
+                                
                              </View>
                         </View>
                         </View>
@@ -150,31 +136,26 @@ export default function Diego() {
                             <View style={Styles.skillRow}>
                                 <Text style={Styles.skillTag}>React Native</Text>
                                 <Text style={Styles.skillTag}>Python</Text>
-                                <Text style={Styles.skillTag}>C#</Text>
-                                <Text style={Styles.skillTag}>SQL</Text>
-                                <Text style={Styles.skillTag}>Pseint</Text>
+                                <Text style={Styles.skillTag}>Diseño</Text>
+                                <Text style={Styles.skillTag}>Animate</Text>
                                 <Text style={Styles.skillTag}>Figma</Text>
-                                <Text style={Styles.skillTag}>Draw.io</Text>
+                                <Text style={Styles.skillTag}>Photoshop</Text>
                                 <Text style={Styles.skillTag}>Adobe Ilustrator</Text>
-                                <Text style={Styles.skillTag}>Adobe After Efects</Text>
-                                <Text style={Styles.skillTag}>AutoCad</Text>
-                                <Text style={Styles.skillTag}>SolidSworks</Text>
-                                <Text style={Styles.skillTag}>Artist</Text>
                             </View>
 
                             <View style={Styles.listItem}>
                                 <Text style={Styles.listIcon}>🇺🇸</Text>
                                 <View>
                                     <Text style={Styles.listTitle}>English Level</Text>
-                                    <Text style={Styles.listText}>B2 (In Progress)</Text>
+                                    <Text style={Styles.listText}> A2+ (Maybe)</Text>
                                 </View>
                             </View>
 
                              <View style={Styles.listItem}>
                                 <Text style={Styles.listIcon}>🇺🇸</Text>
                                 <View>
-                                    <Text style={Styles.listTitle}>Graphic Designer</Text>
-                                    <Text style={Styles.listText}>Proffesional Designer</Text>
+                                    <Text style={Styles.listTitle}>Diseñador</Text>
+                                    <Text style={Styles.listText}>Diseño del cualquier cosa</Text>
                                 </View>
                             </View>
                         </View>
@@ -182,10 +163,19 @@ export default function Diego() {
 
                     {mode === 'pictures' && (
                         <View style={Styles.section}>
-                            <Text style={Styles.subHeader}>MEMORIES</Text>
-                            <Text style={Styles.title}>Gallery 📸</Text>
+                            <Text style={Styles.title}>Mis Animales Espirituales</Text>
                             
                             <View style={Styles.galleryGrid}>
+                                <Image source={require('../../assets/image/Gatos.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/Gato3.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/Gato2.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/mapache.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/mapache1.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/Gato4.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/Gato5.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/Gato6.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/Gato7.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/mapache3.jpeg')} style={Styles.galleryImage} />
                                 
                             </View>
                         </View>
