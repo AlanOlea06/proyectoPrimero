@@ -1,66 +1,55 @@
-import Svg from 'react-native-svg';
+import { Text, View } from 'react-native';
+import Svg, { Rect } from 'react-native-svg';
 
 interface FinbalanceLogoProps {
-  className?: string;
-  variant?: 'light' | 'dark'; 
+  variant?: 'light' | 'dark';
 }
 
-export default function FinbalanceLogo({ 
-  className = "", 
-  variant = "light" 
-}: FinbalanceLogoProps) {
-  
-  const textColor = variant === "light" ? "#ffffff" : "#0b9387";
-  const darkTextColor = variant === "dark" ? "#0b9387" : "#ffffff";
-  const boxColor = variant === "light" ? "#ffffff" : "#0b9387";
-  const darkBoxColor = variant === "dark" ? "#0b9387" : "#ffffffff";
-  const boxTextColor = variant === "light" ? "#0b9387" : "#ffffff";
-  const darkBoxTextColor = variant === "dark" ? "#ffffffff" : "#0b9387";
+export default function FinbalanceLogo({ variant = "light" }: FinbalanceLogoProps) {
+  const boxFill  = variant === "light" ? "#ffffff" : "#0b9387";
+  const boxText  = variant === "light" ? "#0b9387" : "#ffffff";
+  const mainText = variant === "light" ? "#ffffff" : "#0b9387";
+
+  const FONT_SIZE = 26;
 
   return (
-    <Svg
-      width="500"
-      height="60"
-      viewBox="0 0 250 60"
-      fill="none"
+    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
 
-      className={className}
-    >
-      {/* Recuadro para "Fin" */}
-      <rect x="-30" y="8" width="58" height="32" rx="8" fill={variant === "light" ? boxColor : darkBoxColor} />
-      
-      {/* Texto "Fin" */}
-      <text
-        x="0"
-        y="38"
-        fontFamily="OdorMeanChey"
-        fontSize="36"
-        fill={variant === "light" ? boxTextColor : darkBoxTextColor}
-        textAnchor="middle"
-      >
-        Fin
-      </text>
-      
-      {/* Texto "balance" */}
-      <text
-        x="30"
-        y="38"
-        fontFamily="OdorMeanChey"
-        fontSize="36"
-        fill={variant === "light" ? textColor : darkTextColor}
-      >
+      {/* Caja "Fin" — SVG solo para el rectángulo, Text nativo para la palabra */}
+      <View style={{ position: 'relative', justifyContent: 'center', alignItems: 'center' }}>
+        <Svg width={55} height={35} viewBox="0 0 58 38">
+          <Rect x="0" y="0" width="55" height="35" rx="8" fill={boxFill} />
+        </Svg>
+        <Text style={{
+          position: 'absolute',
+          fontFamily: 'OdorMeanChey',
+          fontSize: FONT_SIZE,
+          color: boxText,
+          lineHeight: 40,
+        }}>
+          Fin
+        </Text>
+      </View>
+
+      {/* "balance" */}
+      <Text style={{
+        fontFamily: 'OdorMeanChey',
+        fontSize: FONT_SIZE,
+        color: mainText,
+      }}>
         balance
-      </text>
-    
-      <text
-        x="165"
-        y="38"
-        fontFamily="OdorMeanChey"
-        fontSize="36"
-        fill={variant === "light" ? textColor : darkTextColor}
-      >
+      </Text>
+
+      {/* "TEAM" */}
+      <Text style={{
+        fontFamily: 'OdorMeanChey',
+        fontSize: FONT_SIZE,
+        color: mainText,
+        marginLeft: 10,
+      }}>
         TEAM
-      </text>
-    </Svg>
+      </Text>
+
+    </View>
   );
 }
