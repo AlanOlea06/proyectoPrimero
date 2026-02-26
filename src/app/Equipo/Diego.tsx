@@ -123,7 +123,7 @@ export default function Diego() {
                                 {/* Botón de Instagram */}
                                 <Pressable 
                                     style={Styles.socialButton} 
-                                    onPress={() => Linking.openURL('https://www.instagram.com/dan_f5018')}
+                                    onPress={() => Linking.openURL('https://www.instagram.com/d1iegoloz/?utm_source=ig_web_button_share_sheet')}
                                 >
                                     <Text style={{fontSize: 18}}>📸</Text>
                                     <Text style={Styles.socialText}>Instagram</Text>

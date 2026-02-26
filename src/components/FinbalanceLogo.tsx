@@ -1,3 +1,5 @@
+import Svg from 'react-native-svg';
+
 interface FinbalanceLogoProps {
   className?: string;
   variant?: 'light' | 'dark'; 
@@ -16,12 +18,12 @@ export default function FinbalanceLogo({
   const darkBoxTextColor = variant === "dark" ? "#ffffffff" : "#0b9387";
 
   return (
-    <svg
+    <Svg
       width="500"
       height="60"
       viewBox="0 0 250 60"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+
       className={className}
     >
       {/* Recuadro para "Fin" */}
@@ -59,6 +61,6 @@ export default function FinbalanceLogo({
       >
         TEAM
       </text>
-    </svg>
+    </Svg>
   );
 }
