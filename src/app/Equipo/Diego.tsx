@@ -87,7 +87,7 @@ export default function Diego() {
                                 
                                 <View>
                                     <Text style={Styles.listTitle}>Mascotas </Text>
-                                    <Text style={Styles.listText}>Tengo uno perrito French Pool</Text>
+                                    <Text style={Styles.listText}>Tengo uno perrito French Poodle</Text>
                                 </View>
                             </View>
 
@@ -106,13 +106,8 @@ export default function Diego() {
                                 </View>
                             </View>
 
-                              <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}></Text>
-                                <View>
-                                    <Text style={Styles.listTitle}>My Favourite bands and Singers</Text>
-                                    <Text style={Styles.listText}>Linkin Park, Red Hot Chilli Peppers, Kevin Karl, Ed Maveric</Text>
-                                </View>
-                            </View>
+                            
+                            
 
                             {/* --- NUEVA SECCIÓN: REDES SOCIALES --- */}
                         <View style={{marginTop: 20}}>
@@ -168,7 +163,7 @@ export default function Diego() {
 
                     {mode === 'pictures' && (
                         <View style={Styles.section}>
-                            <Text style={Styles.title}>Gallery 📸</Text>
+                            <Text style={Styles.title}>Mis Animales Espirituales</Text>
                             
                             <View style={Styles.galleryGrid}>
                                 <Image source={require('../../assets/image/Gatos.jpeg')} style={Styles.galleryImage} />
