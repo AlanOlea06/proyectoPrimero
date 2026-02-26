@@ -209,12 +209,8 @@ export default function Tony() {
                                 <Text style={Styles.skillTag}>Artist</Text>
                                 <Text style={Styles.skillTag}>Fornite</Text>
                                 <Text style={Styles.skillTag}>Brainroots</Text>
-                                <Text style={Styles.skillTag}>Changos</Text>
-                                <Text style={Styles.skillTag}>Luigui</Text>
-                                <Text style={Styles.skillTag}>Golpeador De Terians</Text>
-                                <Text style={Styles.skillTag}>Experto en bullyng</Text>
                                 <Text style={Styles.skillTag}>Cuphead</Text>
-                                <Text style={Styles.skillTag}>Speed Runer Minecraft</Text>
+                                <Text style={Styles.skillTag}>Speed Runner Minecraft</Text>
                             </View>
 
                             <View style={Styles.listItem}>
