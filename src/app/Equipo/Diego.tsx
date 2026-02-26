@@ -47,7 +47,7 @@ export default function Diego() {
                             <View style={Styles.cardBeige}>
                                 <Text style={Styles.cardTitle}>Soy el Rayo Mc Queen</Text>
                                 <Text style={Styles.cardText}>
-                                    "Soy Veloz"
+                                    "Soy Veloz, yo desayuno perdedores"
                                 </Text>
                             </View>
 
@@ -166,6 +166,7 @@ export default function Diego() {
                             <Text style={Styles.title}>Mis Animales Espirituales</Text>
                             
                             <View style={Styles.galleryGrid}>
+                                <Image source={require('../../assets/image/Gato7.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/Gatos.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/Gato3.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/Gato2.jpeg')} style={Styles.galleryImage} />
@@ -174,7 +175,7 @@ export default function Diego() {
                                 <Image source={require('../../assets/image/Gato4.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/Gato5.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/Gato6.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/Gato7.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/Gatos.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/mapache3.jpeg')} style={Styles.galleryImage} />
                                 
                             </View>
