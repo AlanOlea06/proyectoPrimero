@@ -31,7 +31,7 @@ export default function Diego() {
                     />
                     <Text style={Styles.headerName}>{nombre || "Diego"}</Text>
                     <Text style={Styles.headerBio}>
-                        Soy Jugador profesional de Obbys en Roblox{'\n'}
+                        Soy Un Ticsito no tan Ticsito{'\n'}
                         
                     </Text>
                 </View>
@@ -47,7 +47,7 @@ export default function Diego() {
                             <View style={Styles.cardBeige}>
                                 <Text style={Styles.cardTitle}>Soy el Rayo Mc Queen</Text>
                                 <Text style={Styles.cardText}>
-                                    "Soy Veloz"
+                                    "Soy Veloz, yo desayuno perdedores"
                                 </Text>
                             </View>
 
@@ -87,7 +87,7 @@ export default function Diego() {
                                 
                                 <View>
                                     <Text style={Styles.listTitle}>Mascotas </Text>
-                                    <Text style={Styles.listText}>Tengo uno perrito French Pool</Text>
+                                    <Text style={Styles.listText}>Tengo uno perrito French Poodle</Text>
                                 </View>
                             </View>
 
@@ -101,42 +101,28 @@ export default function Diego() {
                                 <View style={Styles.listItem}>
             
                                 <View>
-                                    <Text style={Styles.listTitle}>Mi Profe Fav</Text>
-                                    <Text style={Styles.listText}>Javier</Text>
+                                    <Text style={Styles.listTitle}>Siempre del mejor Equipo</Text>
+                                    <Text style={Styles.listText}>FC Barcelona</Text>
                                 </View>
                             </View>
 
-                              <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}>🎤</Text>
-                                <View>
-                                    <Text style={Styles.listTitle}>My Favourite bands and Singers</Text>
-                                    <Text style={Styles.listText}>Linkin Park, Red Hot Chilli Peppers, Kevin Karl, Ed Maveric</Text>
-                                </View>
-                            </View>
+                            
+                            
 
                             {/* --- NUEVA SECCIÓN: REDES SOCIALES --- */}
                         <View style={{marginTop: 20}}>
                              <Text style={Styles.subHeader}>CONNECT</Text>
-                             <Text style={Styles.cardTitle}>Follow Me  Please</Text>
+                             <Text style={Styles.cardTitle}>Sigueme si quieres</Text>
                              
                              <View style={Styles.socialRow}>
                                 {/* Botón de Instagram */}
-                                <Pressable 
-                                    style={Styles.socialButton} 
-                                    onPress={() => Linking.openURL('https://www.instagram.com/d1iegoloz/?utm_source=ig_web_button_share_sheet')}
-                                >
+                                <View style={Styles.galleryGrid}>
+                                <Image source={require('../../assets/image/Insta.jpeg')} style={Styles.galleryImage} />
+                                
+                            </View>
                                     <Text style={{fontSize: 18}}>📸</Text>
                                     <Text style={Styles.socialText}>Instagram</Text>
-                                </Pressable>
-
-                                {/* Botón de GitHub (o lo que quieras) */}
-                                <Pressable 
-                                    style={Styles.socialButton}
-                                    onPress={() => Linking.openURL('https://github.com/DanielFlores235')}
-                                >
-                                    <Text style={{fontSize: 18}}>🐙</Text>
-                                    <Text style={Styles.socialText}>GitHub</Text>
-                                </Pressable>
+                                
                              </View>
                         </View>
                         </View>
@@ -150,31 +136,26 @@ export default function Diego() {
                             <View style={Styles.skillRow}>
                                 <Text style={Styles.skillTag}>React Native</Text>
                                 <Text style={Styles.skillTag}>Python</Text>
-                                <Text style={Styles.skillTag}>C#</Text>
-                                <Text style={Styles.skillTag}>SQL</Text>
-                                <Text style={Styles.skillTag}>Pseint</Text>
+                                <Text style={Styles.skillTag}>Diseño</Text>
+                                <Text style={Styles.skillTag}>Animate</Text>
                                 <Text style={Styles.skillTag}>Figma</Text>
-                                <Text style={Styles.skillTag}>Draw.io</Text>
+                                <Text style={Styles.skillTag}>Photoshop</Text>
                                 <Text style={Styles.skillTag}>Adobe Ilustrator</Text>
-                                <Text style={Styles.skillTag}>Adobe After Efects</Text>
-                                <Text style={Styles.skillTag}>AutoCad</Text>
-                                <Text style={Styles.skillTag}>SolidSworks</Text>
-                                <Text style={Styles.skillTag}>Artist</Text>
                             </View>
 
                             <View style={Styles.listItem}>
                                 <Text style={Styles.listIcon}>🇺🇸</Text>
                                 <View>
                                     <Text style={Styles.listTitle}>English Level</Text>
-                                    <Text style={Styles.listText}>B2 (In Progress)</Text>
+                                    <Text style={Styles.listText}> A2+ (Maybe)</Text>
                                 </View>
                             </View>
 
                              <View style={Styles.listItem}>
                                 <Text style={Styles.listIcon}>🇺🇸</Text>
                                 <View>
-                                    <Text style={Styles.listTitle}>Graphic Designer</Text>
-                                    <Text style={Styles.listText}>Proffesional Designer</Text>
+                                    <Text style={Styles.listTitle}>Diseñador</Text>
+                                    <Text style={Styles.listText}>Diseño del cualquier cosa</Text>
                                 </View>
                             </View>
                         </View>
@@ -182,15 +163,20 @@ export default function Diego() {
 
                     {mode === 'pictures' && (
                         <View style={Styles.section}>
-                            <Text style={Styles.title}>Gallery 📸</Text>
+                            <Text style={Styles.title}>Mis Animales Espirituales</Text>
                             
                             <View style={Styles.galleryGrid}>
+                                <Image source={require('../../assets/image/Gato7.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/Gatos.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/Gato3.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/Gato2.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/mapache.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/mapache1.jpeg')} style={Styles.galleryImage} />
                                 <Image source={require('../../assets/image/Gato4.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/Gato5.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/Gato6.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/Gatos.jpeg')} style={Styles.galleryImage} />
+                                <Image source={require('../../assets/image/mapache3.jpeg')} style={Styles.galleryImage} />
                                 
                             </View>
                         </View>

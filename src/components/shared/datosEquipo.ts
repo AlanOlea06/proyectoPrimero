@@ -27,7 +27,7 @@ export const diccionarioEquipo = {
   },
   Paul: {
     nombre: 'Paul',
-    descripcion: 'Hola soy paul hdeiuhaiuwhiuhwahiuhwa',
+    descripcion: 'Ya lo ves la vida es asi ',
     imagen: require('../../assets/image/Paul.jpeg')
   }
 };
