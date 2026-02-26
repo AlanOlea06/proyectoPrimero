@@ -1,157 +1,228 @@
 import { useLocalSearchParams } from "expo-router";
-import React from "react";
-import { Image, Linking, Pressable, ScrollView, Text, View } from "react-native";
-import { Styles } from "../EquipoStyles/IvanStyles";
+import React, { useEffect, useRef } from "react";
+import {
+    Animated,
+    Image,
+    Linking,
+    Pressable,
+    ScrollView,
+    Text,
+    View,
+} from "react-native";
+import { C, Styles } from "../EquipoStyles/IvanStyles";
 
+// Animación de entrada escalonada
+const useFadeSlide = (delay: number = 0) => {
+  const opacity    = useRef(new Animated.Value(0)).current;
+  const translateY = useRef(new Animated.Value(24)).current;
 
+  useEffect(() => {
+    Animated.parallel([
+      Animated.timing(opacity, {
+        toValue: 1, duration: 500, delay, useNativeDriver: true,
+      }),
+      Animated.spring(translateY, {
+        toValue: 0, tension: 60, friction: 10, delay, useNativeDriver: true,
+      } as any),
+    ]).start();
+  }, []);
+
+  return { opacity, transform: [{ translateY }] };
+};
+
+// Componente: Sección con línea decorativa 
+const SectionTitle = ({ title }: { title: string }) => (
+  <View style={Styles.sectionHeader}>
+    <Text style={Styles.subHeader}>{title}</Text>
+    <View style={Styles.sectionLine} />
+  </View>
+);
+
+//  Componente: Skill tag 
+const Skill = ({ label }: { label: string }) => (
+  <Text style={Styles.skillTag}>{label}</Text>
+);
+
+//  Punto decorativo 
+const Dot = () => (
+  <View style={{
+    width: 6, height: 6, borderRadius: 3,
+    backgroundColor: C.accent,
+    marginRight: 14, marginTop: 2,
+    alignSelf: 'flex-start',
+  }} />
+);
+
+// Componente: List item
+const ListCard = ({ title, text }: { title: string; text: string }) => (
+  <View style={Styles.listItem}>
+    <Dot />
+    <View style={{ flex: 1 }}>
+      <Text style={Styles.listTitle}>{title}</Text>
+      <Text style={Styles.listText}>{text}</Text>
+    </View>
+  </View>
+);
+
+// Galería con primer elemento destacado 
+const Gallery = ({ images }: { images: any[] }) => (
+  <View style={Styles.galleryGrid}>
+    {images.map((src, i) => (
+      <Image
+        key={i}
+        source={src}
+        style={i === 0 ? Styles.galleryImage : Styles.galleryImage}
+      />
+    ))}
+  </View>
+);
+
+// Pantalla principal 
 export default function Ivan() {
-    const { nombre, mode = 'personal' } = useLocalSearchParams();
+  const { nombre, mode = 'personal' } = useLocalSearchParams();
 
-    return (
-        <View style={Styles.mainContainer}>
-            
-            <ScrollView 
-                style={{ flex: 1 }} 
-                contentContainerStyle={{ paddingBottom: 100 }} // Space for nav bar
-            >
-                
-                {/* Header Principal*/}
-            <View style={Styles.headerContainer}>
-    
-            <Image 
-                source={require('../../assets/image/ivan.jpeg')} 
-                style={Styles.image} 
-            />
+  const header  = useFadeSlide(0);
+  const content = useFadeSlide(150);
+  const footer  = useFadeSlide(280);
 
-    
-            <View style={Styles.textContainer}>
-                <Text style={Styles.headerName}>{nombre || "Ivan"}</Text>
-                <Text style={Styles.headerBio}>"El maestro del za" {'\n'}
-                </Text>
-                <Text style={Styles.headerBio}>
-                    Desarrollador de Finbalance en Front-end, Back-end, Base de Datos, Diseño Grafico y Ciberseguridad.{'\n'}
-                    Tambien soy catador de cheves profesional{'\n'}
-                </Text>
+  const personalImages = [
+    require('../../assets/image/IMAGEN1.jpeg'),
+    require('../../assets/image/IMAGEN2.jpeg'),
+    require('../../assets/image/IMAGEN3.jpeg'),
+    require('../../assets/image/IMAGEN4.jpeg'),
+    require('../../assets/image/IMAGEN5.jpeg'),
+    require('../../assets/image/IMAGEN6.jpeg'),
+    require('../../assets/image/IMAGEN7.jpeg'),
+    require('../../assets/image/IMAGEN8.jpeg'),
+    require('../../assets/image/IMAGEN9.jpeg'),
+    require('../../assets/image/IMAGEN10.jpeg'),
+  ];
+
+  const picturesImages = [
+    require('../../assets/image/IvanPics/pic1.jpeg'),
+    require('../../assets/image/IvanPics/pic2.jpeg'),
+    require('../../assets/image/IvanPics/pic3.jpeg'),
+    require('../../assets/image/IvanPics/pic4.jpeg'),
+    require('../../assets/image/IvanPics/pic5.jpeg'),
+    require('../../assets/image/IvanPics/pic6.jpeg'),
+    require('../../assets/image/IvanPics/pic7.jpeg'),
+    require('../../assets/image/IvanPics/pic8.jpeg'),
+    require('../../assets/image/IvanPics/pic9.jpeg'),
+    require('../../assets/image/IvanPics/pic10.jpeg'),
+  ];
+
+  return (
+    <View style={Styles.mainContainer}>
+      <ScrollView
+        style={{ flex: 1 }}
+        contentContainerStyle={Styles.scrollContent}
+        showsVerticalScrollIndicator={false}
+      >
+
+        {/* HEADER*/}
+        <Animated.View style={[Styles.headerContainer, header]}>
+          <View style={Styles.headerTop}>
+
+            <View style={Styles.imageWrapper}>
+              <Image
+                source={require('../../assets/image/ivan.jpeg')}
+                style={Styles.image}
+              />
             </View>
-        </View>
 
-                {/* Contenido */}
-                <View style={{ padding: 25 }}> 
-                
-                    {mode === 'personal' && (
-                        <View style={Styles.section}>
-                            <Text style={Styles.subHeader}>Asi Nomas Viejon</Text>
-                            
-                            <View style={Styles.cardChivas}>
-                                <Text style={Styles.cardTitle}>Mi abuelito siempre me decía</Text>
-                                <Text style={Styles.cardText}>
-                                    "Arriba las Chivas rayadas del Guadalajara y que la cuenten como quieran"
-                                </Text>
-                            </View>
+            <View style={Styles.headerTextBlock}>
+              <Text style={Styles.headerName}>{nombre || "Ivan"}</Text>
+              <Text style={Styles.headerTagline}>"El maestro del za"</Text>
+            </View>
+          </View>
 
-                            <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}></Text>
-                                <View>
-                            <Text style={Styles.listTitle}>Pongan atencion:</Text>
-                            <Text style={Styles.listText}>Al chile uno tiene que ser bien mandilon con su mujer, sin renegarle cabrones
-                            </Text>
-                                </View>
-                            </View>
+          <Text style={Styles.headerBio}>
+            Futuro Dev Full-Stack, tambien soy catador de cheves 
+          </Text>
+        </Animated.View>
 
-                            <Text style={Styles.subHeader}>Ivanqsadilla core:</Text>
+        <View style={Styles.divider} />
 
-                            <View style={Styles.galleryGrid}>
-                                <Image source={require('../../assets/image/IMAGEN1.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IMAGEN2.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IMAGEN3.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IMAGEN4.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IMAGEN5.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IMAGEN6.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IMAGEN7.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IMAGEN8.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IMAGEN9.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IMAGEN10.jpeg')} style={Styles.galleryImage} />
-                                </View>
-                        
+        {/* CONTENIDO POR MODO  */}
+        <Animated.View style={content}>
 
-                            {/* Redes Sociales */}
-                        <View style={{marginTop: 20}}>
-                             <Text style={Styles.subHeader}>No me sigan, tengo mujer.</Text>
-                             
-                             <View style={Styles.socialButton}>
-                                {/* Botón de Instagram */}
-                                <Pressable 
-                                    style={Styles.socialButton} 
-                                    onPress={() => Linking.openURL('https://www.instagram.com/ivanqsadilla')}
-                                >
-                                <Text style={Styles.socialText}>Mi Insta</Text>
-                                </Pressable>
-                             </View>
-                        </View>
-                        </View>
-                    )}
+          {/* PERSONAL  */}
+          {mode === 'personal' && (
+            <View style={Styles.section}>
+              <SectionTitle title="Así Nomas Viejón" />
 
-                    {mode === 'professional' && (
-                        <View style={Styles.section}>
-                            <Text style={Styles.title}>Habilidades Destacadas</Text>
-                            
-                            <View style={Styles.skillRow}>
-                                <Text style={Styles.skillTag}>JavaScript</Text>
-                                <Text style={Styles.skillTag}>Next.js</Text>
-                                <Text style={Styles.skillTag}>Fortnite</Text>
-                                <Text style={Styles.skillTag}>Typescript</Text>
-                                <Text style={Styles.skillTag}>c#</Text>
-                                <Text style={Styles.skillTag}>Analista de futbol</Text>
-                                <Text style={Styles.skillTag}>.NET</Text>
-                            </View>
+              <ListCard
+                title="Mi estilo de liderazgo"
+                text="Me gusta guiar y ayudar a los demás a aprender con un estilo informal y amigable."
+              />
+              <ListCard
+                title="Pongan atención"
+                text="Al chile uno tiene que ser bien mandilón con su mujer, sin renegarle cabrones."
+              />
 
-                            <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}></Text>
-                                <View>
-                                    <Text style={Styles.listTitle}>Nivel de Ingles</Text>
-                                    <Text style={Styles.listText}>C1 (Sometimes)</Text>
-                                </View>
-                            </View>
-
-                            <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}></Text>
-                                <View>
-                                    <Text style={Styles.listTitle}>Mr. Worldwide</Text>
-                                    <Text style={Styles.listText}>La mejor voz de Pitbull de todo CUU</Text>
-                                </View>
-                            </View>
-
-                             <View style={Styles.listItem}>
-                                <Text style={Styles.listIcon}></Text>
-                                <View>
-                                    <Text style={Styles.listTitle}>Nivel de Edicion de video</Text>
-                                    <Text style={Styles.listText}>La mera paipa pal Sony Vegas y el Ae</Text>
-                                </View>
-                            </View>
-                        </View>
-                    )}
-
-                    {mode === 'pictures' && (
-                        <View style={Styles.section}>
-                            <Text style={Styles.title}>Yo y la gente que amo</Text>
-                            
-                            <View style={Styles.galleryGrid}>
-                                <Image source={require('../../assets/image/IvanPics/pic1.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IvanPics/pic2.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IvanPics/pic3.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IvanPics/pic4.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IvanPics/pic5.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IvanPics/pic6.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IvanPics/pic7.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IvanPics/pic8.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IvanPics/pic9.jpeg')} style={Styles.galleryImage} />
-                                <Image source={require('../../assets/image/IvanPics/pic10.jpeg')} style={Styles.galleryImage} />
-                            </View>
-                        </View>
-                    )}
+              <View style={Styles.cardChivas}>
+                <View style={Styles.cardChivasAccent}>
+                  {/* Línea dorada en lugar de emoji */}
+                  <View style={{ width: 3, height: 18, backgroundColor: C.gold, borderRadius: 2, marginRight: 10 }} />
+                  <Text style={Styles.cardTitle}>Mi abuelito siempre me decía</Text>
                 </View>
+                <Text style={Styles.cardText}>
+                  "Arriba las Chivas rayadas del Guadalajara y que la cuenten como quieran"
+                </Text>
+              </View>
 
-            </ScrollView>
-        </View>
-    );
+              <SectionTitle title="Ivanqsadilla Core" />
+              <Gallery images={personalImages} />
+            </View>
+          )}
+
+          {/*  PROFESSIONAL */}
+          {mode === 'professional' && (
+            <View style={Styles.section}>
+              <SectionTitle title="Stack & Skills" />
+
+              <View style={Styles.skillRow}>
+                {['JavaScript','TypeScript','Next.js','.NET','C#','Sony Vegas','After Effects','Fortnite Pro','Analista de Futbol'].map(s => (
+                  <Skill key={s} label={s} />
+                ))}
+              </View>
+
+              <SectionTitle title="Logros Destacados" />
+
+              <ListCard title="Nivel de Inglés"        text="C1 — Advanced (Sometimes)" />
+              <ListCard title="Mr. Worldwide"           text="La mejor voz de Pitbull de todo CUU. Dale." />
+              <ListCard title="Edición de Video"        text="La mera paipa pal Sony Vegas y el AE." />
+              <ListCard title="Finbalance App"          text="Front-end, Back-end, Base de Datos, Diseño Gráfico, Ciberseguridad, o sea basicamente todo" />
+            </View>
+          )}
+
+          {/* PICTURES */}
+          {mode === 'pictures' && (
+            <View style={Styles.section}>
+              <SectionTitle title="Yo y la gente que amo" />
+              <Gallery images={picturesImages} />
+            </View>
+          )}
+
+        </Animated.View>
+
+        {/* FOOTER  */}
+        <Animated.View style={[{ paddingHorizontal: 20, paddingTop: 8 }, footer]}>
+          {mode === 'personal' && (
+            <>
+              <SectionTitle title="No me sigan, tengo mujer" />
+              <Pressable
+                style={({ pressed }) => [Styles.socialButton, pressed && { opacity: 0.7 }]}
+                onPress={() => Linking.openURL('https://www.instagram.com/ivanqsadilla')}
+              >
+                <View style={{ width: 3, height: 20, backgroundColor: C.accent, borderRadius: 2 }} />
+                <Text style={Styles.socialText}>@ivanqsadilla</Text>
+              </Pressable>
+            </>
+          )}
+        </Animated.View>
+
+      </ScrollView>
+    </View>
+  );
 }
