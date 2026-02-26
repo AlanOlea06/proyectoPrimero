@@ -42,11 +42,11 @@ export const Paul = () => {
                         <View style={Styles.ines}>
                             <HoverImage
                                 source={require(`../../assets/image/maya.png`)}
-                                description="Maya es muy bonita"
+                                description="Maya esta demasiado chiple"
                             />
                             <HoverImage
                                 source={require(`../../assets/image/PINTA.png`)}
-                                description="Pinta esta loca"
+                                description="Pinta esta pirstona y tiene cuerpo de frijol"
                             />
                             <HoverImage
                                 source={require(`../../assets/image/Rayitas (1).png`)}
@@ -55,7 +55,7 @@ export const Paul = () => {
 
                             <HoverImage
                                 source={require(`../../assets/image/Flora.png`)}
-                                description="Flora esta loca, es un tornado"
+                                description="Flora esta loca y parece tornado"
                             />
                             <HoverImage
                                 source={require(`../../assets/image/boris.png`)}
@@ -63,7 +63,7 @@ export const Paul = () => {
                             />
                             <HoverImage
                                 source={require(`../../assets/image/lola.png`)}
-                                description="Lola, la mas tranquila de todas, probablemente"
+                                description="Lola, la mas tranquila de todas, probablemente por que solo tiene un solo ojo"
                             />
                         </View>
                     </View>
@@ -93,6 +93,12 @@ export const Paul = () => {
                             <Text style={Styles.cardTitle}>Me gusta comer</Text>
                             <Text style={Styles.cardText}>
                                 comida
+                            </Text>
+                        </View>
+                        <View style={Styles.cardChivas}>
+                            <Text style={Styles.cardTitle}>Estoy en frances</Text>
+                            <Text style={Styles.cardText}>
+                                oui oui baguette
                             </Text>
                         </View>
 

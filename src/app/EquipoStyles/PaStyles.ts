@@ -38,7 +38,7 @@ export const Styles = StyleSheet.create({
         backgroundColor: '#333444',
         alignItems: 'center',
         justifyContent: 'center',
-        opacity: 0.8,
+     opacity: 0.8,
         borderRadius: 20,
     },
     overlayText: {
@@ -172,16 +172,16 @@ export const Styles = StyleSheet.create({
     },
     galleryGrid: {
         flexDirection: 'row',
-        flexWrap: 'wrap',            // This makes them wrap to new lines
-        justifyContent: 'space-between', // Pushes images to left and right edges
+        flexWrap: 'wrap',
         width: '100%',
+        height: '100%',
     },
     galleryImage: {
         width: 200,   // Two images per row (48% + 48% + space = 100%)
         height: 200,    // Fixed height for uniformity
         borderRadius: 15,
         marginBottom: 20,
-        marginHorizontal: 20, // Space between rows
-        resizeMode: 'cover', // Ensures image fills the square without distortion
+        marginHorizontal: 20, 
+        resizeMode: 'cover', 
     },
 });
