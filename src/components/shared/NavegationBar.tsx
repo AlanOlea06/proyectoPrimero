@@ -8,7 +8,7 @@ const getBarColorForPerson = (nombre?: string) => {
     'Alan': '#1a4d42',
     'Tony': '#ffffff',
     'Diego': '#ffffff',
-    'Paul': '#333232',
+    'Paul': '#ffffff',
   };
   return nombre && colorMap[nombre] ? colorMap[nombre] : '#00897b';
 };

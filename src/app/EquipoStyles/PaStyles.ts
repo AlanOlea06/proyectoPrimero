@@ -38,6 +38,8 @@ export const Styles = StyleSheet.create({
         backgroundColor: '#333444',
         alignItems: 'center',
         justifyContent: 'center',
+        opacity: 0.8,
+        borderRadius: 20,
     },
     overlayText: {
         color: 'white',
@@ -69,12 +71,10 @@ export const Styles = StyleSheet.create({
     avatar: {
         width: 180,
         height: 180,
-        marginBottom: 30,
-
         
-        borderRadius: 90, // Perfect circle
-        borderWidth: 1,
-        borderColor: '#ffffff',
+        backgroundColor: '#00404d',
+        margin : 15,
+
     },
      headerName: {
         fontSize: 32,
@@ -93,15 +93,15 @@ export const Styles = StyleSheet.create({
     },
     headerContainer: {
         backgroundColor: '#00404d', // Professional Dark Tea
-        paddingTop: 10,
-        paddingBottom: 5,
-        paddingHorizontal: 50,
         flexWrap: 'wrap',
+        flexDirection: 'row',
         elevation: 10,               // Shadow for Android
         shadowColor: "#36373b",         // Shadow for iOS
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.3,
         shadowRadius: 5,
+        height: 200,
+
 },
  subHeader: {
         color: '#00796b', // Teal accent color
@@ -131,5 +131,57 @@ export const Styles = StyleSheet.create({
         backgroundColor: '#cff0ea', // Light gray bubble
         padding: 15,
         borderRadius: 12,
+    }, socialButton: {
+        backgroundColor: '#ffffff', // Color oscuro elegante
+        paddingVertical: 12,
+        paddingHorizontal: 10,
+        width: 90,
+        height: 50,
+        borderRadius: 25,
+        flexDirection: 'row',
+        alignItems: 'center',
+        elevation: 3, // Sombra suave
+    },
+    socialText: {
+        color: '#000000',
+        fontWeight: 'bold',
+        fontSize: 14,
+    },
+    cardChivas: {
+        backgroundColor: '#ffffff',
+        padding: 20,
+        borderRadius: 15,
+        marginBottom: 20,
+        borderLeftWidth: 5,
+        borderLeftColor: '#0e0cb4',
+    },
+    cardTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#08002c',
+        marginBottom: 5,
+    },
+    cardText: {
+        color: '#5d4037',
+        fontSize: 18,
+        fontStyle: 'italic',
+        lineHeight: 22,
+    },
+    section: {
+        marginBottom: 25,
+    },
+    galleryGrid: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',            // This makes them wrap to new lines
+        justifyContent: 'space-between', // Pushes images to left and right edges
+        width: '100%',
+    },
+    galleryImage: {
+        width: 200,   // Two images per row (48% + 48% + space = 100%)
+        height: 200,    // Fixed height for uniformity
+        borderRadius: 15,
+        marginBottom: 20,
+        marginHorizontal: 20, // Space between rows
+        resizeMode: 'cover', // Ensures image fills the square without distortion
     },
 });
