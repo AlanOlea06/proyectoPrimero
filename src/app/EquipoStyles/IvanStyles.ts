@@ -143,8 +143,8 @@ export const Styles = StyleSheet.create({
         height: 200,    // Fixed height for uniformity
         borderRadius: 15,
         marginBottom: 20,
-        marginHorizontal: 20, // Space between rows
-        resizeMode: 'cover', // Ensures image fills the square without distortion
+        marginHorizontal: 20, 
+        resizeMode: 'cover', 
     },
 
     // Boton del Insta

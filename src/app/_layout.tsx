@@ -2,6 +2,7 @@ import { useFonts } from "expo-font";
 import { Stack, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { Pressable } from "react-native";
+
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import FinbalanceLogo from "../components/FinbalanceLogo";
 
