@@ -39,9 +39,10 @@ export const Alan = () => {
 						<View style={{ marginTop: 20 }}>
 							<Text>Perfil Técnico y Profesional</Text>
 							<View>
-							<Text>Desarrollo Full-Stack</Text>
-							<Text style={Styles.parrafo}>Dominio de Next.js y React para aplicaciones web de alto rendimiento, junto con experiencia activa en el desarrollo de aplicaciones móviles.	</Text>
+								<Text>Desarrollo Full-Stack</Text>
+								<Text style={Styles.parrafo}>Dominio de Next.js y React para aplicaciones web de alto rendimiento, junto con experiencia activa en el desarrollo de aplicaciones móviles.	</Text>
 							</View>
+
 							<View>
 								<Text>Lógica de Programación</Text>
 								<Text style={Styles.parrafo}>Capacidad sólida para resolver problemas complejos, diseñar algoritmos y estructurar bases de código eficientes.	</Text>
@@ -51,10 +52,12 @@ export const Alan = () => {
 								<Text>Perfil Bilingüe</Text>
 								<Text style={Styles.parrafo}>Formación académica en el modelo BIS, lo que me permite desenvolverme con fluidez en entornos técnicos en inglés.	</Text>
 							</View>
+							
 							<View>
 								<Text>Gestión de Proyectos</Text>
 								<Text style={Styles.parrafo}>Disciplina para equilibrar mi formación en el cuarto cuatrimestre de la carrera con el desarrollo de proyectos personales y aplicaciones reales.</Text>
 							</View>
+							
 							<View>
 								<Text>Adaptabilidad</Text>
 								<Text style={Styles.parrafo}>Facilidad para aprender nuevas tecnologías y aplicarlas rápidamente a soluciones prácticas.</Text>
